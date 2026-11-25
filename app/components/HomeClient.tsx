@@ -37,8 +37,8 @@ export default function HomeClient({ latestPosts }: HomeClientProps) {
 
   const visibleProjects =
     selectedCategory === "ALL"
-      ? projects.slice(0, 4)
-      : projects.filter((p) => p.category === selectedCategory);
+      ? projects.filter((p) => p.featured).slice(0, 6)
+      : projects.filter((p) => p.category === selectedCategory).slice(0, 6);
 
   const filterTabs: { key: "ALL" | ProjectCategory; label: string }[] = [
     { key: "ALL", label: uiText.filters.all[lang] },
@@ -312,7 +312,9 @@ export default function HomeClient({ latestPosts }: HomeClientProps) {
             href="/projects"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 transition hover:gap-2.5 dark:text-emerald-400"
           >
-            <span>{uiText.sections.viewAllProjects[lang]}</span>
+            <span>
+              {uiText.sections.viewAllProjects[lang]} ({projects.length})
+            </span>
             <ArrowRightIcon className="h-4 w-4" />
           </Link>
         </div>

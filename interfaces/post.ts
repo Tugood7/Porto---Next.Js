@@ -24,6 +24,7 @@ export interface Project {
   highlights: LocalizedList;
   githubUrl?: string;
   liveUrl?: string;
+  liveLabel?: LocalizedText;
   featured?: boolean;
 }
 

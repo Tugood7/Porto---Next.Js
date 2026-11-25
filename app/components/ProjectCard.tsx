@@ -102,7 +102,9 @@ export default function ProjectCard({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-emerald-600 transition hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
               >
-                <span>Live Site</span>
+                <span>
+                  {project.liveLabel ? project.liveLabel[lang] : "Live Site"}
+                </span>
                 <ArrowUpRightIcon className="h-3.5 w-3.5" />
               </a>
             )}

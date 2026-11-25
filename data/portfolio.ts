@@ -24,7 +24,7 @@ export const profile = {
   githubUsername: "Tugood7",
   githubUrl: "https://github.com/Tugood7",
   linkedinName: "Tu Bagus Dwi Fikri",
-  linkedinUrl: "https://www.linkedin.com/in/tu-bagus-dwi-fikri",
+  linkedinUrl: "https://www.linkedin.com/in/tu-bagus-dwi-fikri-27a3a0233",
   email: "tubagusdwifikri@gmail.com",
   summary: {
     id: "Penggemar teknologi yang berfokus pada Internet of Things (IoT), Pengembangan Web, dan Kecerdasan Buatan (AI). Berpengalaman merancang solusi inovatif lintas disiplin—mulai dari perangkat keras IoT peraih Gold Award IREX 2024 di Malaysia, pengembangan aplikasi web full-stack, hingga sistem analisis data pasien berbasis Deep Learning yang terdaftar HKI.",
@@ -48,8 +48,8 @@ export const profile = {
       label: { id: "Hak Cipta Deep Learning", en: "Registered Deep Learning IP" },
     },
     {
-      value: "8+",
-      label: { id: "Peran IT, IoT & Pengajaran", en: "IT, IoT & Mentoring Roles" },
+      value: "14+",
+      label: { id: "Proyek IoT, Web & AI", en: "IoT, Web & AI Projects" },
     },
   ],
 };
@@ -468,16 +468,16 @@ export const projects: Project[] = [
   {
     id: "air-quality-iot",
     title: {
-      id: "Monitoring Kualitas Udara & Asap Halte Bus (IoT)",
-      en: "Urban Bus Stop Air Quality & Smoke Monitoring",
+      id: "Monitoring Kualitas Udara & Emisi Asap Halte Bus (IoT)",
+      en: "Air Quality & Smoke Emission Monitoring at Urban Bus Stops",
     },
     subtitle: {
-      id: "Sistem pemantauan polusi perkotaan secara real-time",
-      en: "Real-time urban air pollution telemetry system",
+      id: "Sistem pemantauan polusi perkotaan real-time dengan MQ-135 & MQ-2",
+      en: "Real-time urban air pollution telemetry using MQ-135 & MQ-2 sensors",
     },
     description: {
-      id: "Perangkat IoT pemantau kualitas udara dan emisi asap di halte bus perkotaan menggunakan sensor MQ-135 dan MQ-2 dengan transmisi data real-time. Penelitian ini dipublikasikan oleh Universitas Islam Riau dan diliput oleh GoRiau.com.",
-      en: "An IoT monitoring node deployed for urban bus stops using MQ-135 and MQ-2 gas sensors to detect harmful smoke and air quality drops in real time. Featured on Universitas Islam Riau's official portal and GoRiau.com.",
+      id: "Perangkat IoT berbasis ESP32 untuk memantau kualitas udara dan emisi asap di halte bus perkotaan menggunakan sensor MQ-135 dan MQ-2 secara real-time. Dipublikasikan oleh Universitas Islam Riau dan diliput GoRiau.com.",
+      en: "An ESP32-based IoT monitoring node for urban bus stops utilizing MQ-135 and MQ-2 gas sensors to monitor air quality and smoke emissions in real time. Featured on Universitas Islam Riau's portal and GoRiau.com.",
     },
     category: "IoT",
     year: "2024",
@@ -485,8 +485,8 @@ export const projects: Project[] = [
     techStack: ["ESP32", "C++", "MQ-135", "MQ-2", "MQTT", "WiFi"],
     highlights: {
       id: [
-        "Kalibrasi sensor gas MQ-135 (kualitas udara) dan MQ-2 (asap/gas mudah terbakar) untuk lingkungan terbuka.",
-        "Pengiriman data telemetri nirkabel secara real-time untuk pemantauan ambang batas bahaya.",
+        "Kalibrasi sensor gas MQ-135 (kualitas udara) dan MQ-2 (asap/gas mudah terbakar) untuk ruang terbuka.",
+        "Pengiriman data telemetri nirkabel real-time untuk pemantauan ambang batas bahaya.",
         "Dipublikasikan di ETD UIR, uir.ac.id, dan media lokal GoRiau.com.",
       ],
       en: [
@@ -495,7 +495,111 @@ export const projects: Project[] = [
         "Published in UIR's institutional repository and featured on uir.ac.id and GoRiau.com.",
       ],
     },
-    githubUrl: "https://github.com/Tugood7",
+    liveUrl:
+      "https://drive.google.com/file/d/1qtaGlkTlW19i2UxPy2dkifUsRbmw_d0y/view?usp=sharing",
+    liveLabel: { id: "Demo / Dokumentasi", en: "Demo / Docs" },
+    featured: true,
+  },
+  {
+    id: "pke-report-web",
+    title: {
+      id: "PKE (Perbaikan Komputer & Elektronik) — Web Pelaporan Teknisi",
+      en: "PKE — Computer & Electronics Maintenance Report Web App",
+    },
+    subtitle: {
+      id: "Aplikasi pelaporan kerusakan & manajemen perbaikan bagi pengguna dan teknisi",
+      en: "Complaint & repair tracking web platform for users and technicians",
+    },
+    description: {
+      id: "Aplikasi web berbasis Laravel dan PHP untuk mempermudah pengguna melaporkan kendala perangkat komputer/elektronik serta membantu teknisi melacak diagnosa, perbaikan, dan pemeliharaan perangkat secara terstruktur.",
+      en: "A Laravel and PHP web application built for users to submit hardware/electronics repair tickets and for technicians to manage diagnostics, maintenance logs, and device resolutions.",
+    },
+    category: "Web",
+    year: "2025",
+    badge: { id: "Web Aplikasi · Laravel", en: "Web App · Laravel" },
+    techStack: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap"],
+    highlights: {
+      id: [
+        "Alur pengaduan perbaikan komputer dan perangkat elektronik terintegrasi untuk pengguna & teknisi.",
+        "Pencatatan status perbaikan, riwayat pemeliharaan preventif, dan pelaporan institusi.",
+        "Meminimalkan waktu henti (downtime) perangkat laboratorium melalui pelacakan tiket terpusat.",
+      ],
+      en: [
+        "End-to-end maintenance complaint workflow connecting end-users and repair technicians.",
+        "Structured tracking of hardware diagnostics, repair status, and institutional maintenance logs.",
+        "Reduced laboratory equipment downtime through centralized ticket management.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/PKE_Complaint",
+    liveUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7425019867147223040/",
+    liveLabel: { id: "Demo di LinkedIn", en: "LinkedIn Demo" },
+    featured: true,
+  },
+  {
+    id: "smart-door-esp32cam",
+    title: {
+      id: "Sistem Keamanan Pintu Pintar dengan Smart Bell & Face Recognition",
+      en: "Smart Door Security System with Smart Bell & Face Recognition",
+    },
+    subtitle: {
+      id: "Akses pintu otomatis berbasis ESP32-CAM dan kunci solenoid",
+      en: "Automated door access using ESP32-CAM and solenoid lock",
+    },
+    description: {
+      id: "Perancangan dan pengembangan sistem keamanan pintu pintar yang menggabungkan bel pintar (Smart Bell), pengenalan wajah (Face Recognition) menggunakan ESP32-CAM, serta aktuator kunci pintu solenoid.",
+      en: "Design and development of a smart door security system combining a smart bell, real-time face recognition powered by ESP32-CAM, and an electronic solenoid door lock.",
+    },
+    category: "IoT",
+    year: "2024",
+    badge: { id: "ESP32-CAM · Smart Security", en: "ESP32-CAM · Smart Security" },
+    techStack: ["ESP32-CAM", "Solenoid Lock", "Face Recognition", "C++", "WiFi"],
+    highlights: {
+      id: [
+        "Integrasi modul kamera ESP32-CAM untuk identifikasi wajah tamu di depan pintu.",
+        "Kontrol aktuator kunci solenoid otomatis untuk membuka akses bagi wajah terverifikasi.",
+        "Dilengkapi fitur Smart Bell untuk notifikasi pengunjung secara langsung.",
+      ],
+      en: [
+        "Integrated ESP32-CAM camera pipeline for visitor face recognition at entry points.",
+        "Automated solenoid lock actuation for verified access control.",
+        "Includes a smart bell workflow for real-time visitor notifications.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/ESP32-Cam-Smart-Bell",
+    featured: true,
+  },
+  {
+    id: "flood-fuzzy-iot",
+    title: {
+      id: "Monitoring & Prediksi Dini Banjir IoT Menggunakan Logika Fuzzy",
+      en: "IoT Flood Monitoring & Early Prediction System Using Fuzzy Logic",
+    },
+    subtitle: {
+      id: "Sistem peringatan dini banjir cerdas berbasis keputusan Fuzzy Logic",
+      en: "Intelligent flood early-warning decision system powered by Fuzzy Logic",
+    },
+    description: {
+      id: "Sistem pemantauan dan prediksi dini banjir berbasis Internet of Things yang menerapkan algoritma Fuzzy Logic untuk pengambilan keputusan tingkat siaga secara cerdas dan akurat berdasarkan data sensor lingkungan.",
+      en: "An IoT-based flood monitoring and early prediction system applying Fuzzy Logic for intelligent, multi-parameter risk classification and automated early-warning decision-making.",
+    },
+    category: "AI",
+    year: "2024",
+    badge: { id: "Fuzzy Logic · IoT", en: "Fuzzy Logic · IoT" },
+    techStack: ["ESP32", "Fuzzy Logic", "Water Level Sensor", "C++", "IoT"],
+    highlights: {
+      id: [
+        "Penerapan inferensi Fuzzy Logic untuk mengklasifikasikan tingkat risiko banjir secara adaptif.",
+        "Pemantauan ketinggian air dan parameter lingkungan secara kontinu dan real-time.",
+        "Dirancang sebagai sistem peringatan dini untuk mendukung mitigasi bencana.",
+      ],
+      en: [
+        "Implemented Fuzzy Logic inference to adaptively classify flood alert levels.",
+        "Continuous real-time monitoring of water levels and environmental indicators.",
+        "Engineered as an automated early-warning architecture for disaster mitigation.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/Flood-Detection-IoT-with-Fuzzy-Logic",
     featured: true,
   },
   {
@@ -565,6 +669,207 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "arm-robotic-esp32",
+    title: {
+      id: "Lengan Robot (Arm Robotic) Berbasis ESP32 & Servo",
+      en: "ESP32 Servo-Controlled Robotic Arm",
+    },
+    subtitle: {
+      id: "Prototipe lengan robot multi-aktuator terkendali mikrokontroler",
+      en: "Multi-axis servo robotic arm prototype driven by ESP32",
+    },
+    description: {
+      id: "Rancang bangun lengan robot (Arm Robotic) menggunakan mikrokontroler ESP32 dan motor servo untuk otomasi pergerakan presisi, kontrol sudut aktuator, serta demonstrasi mekanika robotika.",
+      en: "Design and assembly of a multi-servo robotic arm powered by an ESP32 microcontroller for precise angular actuation, pick-and-place automation, and robotics demonstrations.",
+    },
+    category: "IoT",
+    year: "2025",
+    badge: { id: "Robotika · ESP32", en: "Robotics · ESP32" },
+    techStack: ["ESP32", "Servo Motor", "PWM Control", "C++", "Robotics"],
+    highlights: {
+      id: [
+        "Kontrol multi-servo sinkron menggunakan sinyal PWM dari mikrokontroler ESP32.",
+        "Kalibrasi sudut gerak lengan untuk manuver pengambilan objek secara halus.",
+        "Didemonstrasikan langsung pada unggahan proyek LinkedIn.",
+      ],
+      en: [
+        "Synchronized multi-servo PWM control driven by an ESP32 microcontroller.",
+        "Calibrated joint articulation for smooth object manipulation sequences.",
+        "Showcased in a live hardware demonstration post on LinkedIn.",
+      ],
+    },
+    liveUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7470295085952188417/",
+    liveLabel: { id: "Demo di LinkedIn", en: "LinkedIn Demo" },
+    featured: false,
+  },
+  {
+    id: "non-invasive-glucose",
+    title: {
+      id: "Prototipe Pengukuran Kadar Glukosa Non-Invasif",
+      en: "Non-Invasive Glucose Level Measurement Prototype",
+    },
+    subtitle: {
+      id: "Perangkat kesehatan pintar tanpa jarum berbasis sensor optik & IoT",
+      en: "Needle-free smart healthcare sensing prototype",
+    },
+    description: {
+      id: "Prototipe perangkat kesehatan untuk mengestimasi kadar glukosa darah secara non-invasif (tanpa melukai kulit) menggunakan pendekatan sensor biomedis dan pemrosesan sinyal mikrokontroler.",
+      en: "A biomedical hardware prototype designed to estimate blood glucose levels non-invasively (needle-free) through optical sensing and embedded microcontroller signal processing.",
+    },
+    category: "IoT",
+    year: "2024",
+    badge: { id: "Biomedical IoT", en: "Biomedical IoT" },
+    techStack: ["ESP32", "Optical Sensor", "Biomedical IoT", "C++"],
+    highlights: {
+      id: [
+        "Pendekatan pengukuran glukosa non-invasif yang lebih nyaman dan higienis bagi pengguna.",
+        "Pemrosesan pembacaan sensor secara real-time pada perangkat mikrokontroler.",
+        "Dilengkapi dokumentasi dan demonstrasi pengujian prototipe.",
+      ],
+      en: [
+        "Explores comfortable, needle-free blood glucose estimation using optical sensing.",
+        "Real-time embedded signal sampling and processing on microcontroller hardware.",
+        "Accompanied by prototype test documentation and demo footage.",
+      ],
+    },
+    liveUrl:
+      "https://drive.google.com/file/d/1-NtjA5N5uI740vA7boxiq4kBlJyy-YQw/view?usp=sharing",
+    liveLabel: { id: "Demo / Dokumentasi", en: "Demo / Docs" },
+    featured: false,
+  },
+  {
+    id: "iot-blood-check",
+    title: {
+      id: "IoT Blood Check — Pemantauan Kesehatan Darah",
+      en: "IoT Blood Check — Smart Health Monitoring",
+    },
+    subtitle: {
+      id: "Sistem pemantauan parameter kesehatan berbasis IoT",
+      en: "Connected biomedical health check prototype",
+    },
+    description: {
+      id: "Proyek perangkat IoT untuk membantu pemeriksaan dan pemantauan indikator kesehatan darah secara terhubung dengan pengiriman data digital untuk kemudahan pencatatan.",
+      en: "An IoT healthcare prototype built to capture and transmit blood health check readings digitally for streamlined monitoring and record keeping.",
+    },
+    category: "IoT",
+    year: "2024",
+    badge: { id: "HealthTech · IoT", en: "HealthTech · IoT" },
+    techStack: ["ESP32", "Biomedical Sensors", "WiFi", "C++"],
+    highlights: {
+      id: [
+        "Akuisisi data sensor kesehatan secara otomatis dan terstruktur.",
+        "Integrasi konektivitas nirkabel untuk pemantauan jarak jauh.",
+        "Kode sumber tersedia secara terbuka di GitHub.",
+      ],
+      en: [
+        "Automated biometric sensor acquisition with digital telemetry output.",
+        "Wireless connectivity for remote health data visibility.",
+        "Open-source firmware and project schematics hosted on GitHub.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/IoT_Blood_Check",
+    featured: false,
+  },
+  {
+    id: "iot-gas-station-esp32",
+    title: {
+      id: "Prototipe SPBU Pintar Berbasis IoT (ESP32)",
+      en: "IoT Gas Station Prototype With ESP32",
+    },
+    subtitle: {
+      id: "Otomasi pengisian bahan bakar & pemantauan transaksi pintar",
+      en: "Smart automated fuel dispenser & telemetry prototype",
+    },
+    description: {
+      id: "Prototipe sistem SPBU mini berbasis ESP32 yang mengotomatiskan kontrol pengisian, pengukuran volume, dan pemantauan operasional melalui jaringan Internet of Things.",
+      en: "An ESP32-powered smart gas station prototype automating dispensing control, flow/volume measurement, and connected operational monitoring over IoT.",
+    },
+    category: "IoT",
+    year: "2024",
+    badge: { id: "Smart Automation", en: "Smart Automation" },
+    techStack: ["ESP32", "Flow Sensor", "Relay Control", "WiFi", "C++"],
+    highlights: {
+      id: [
+        "Kontrol otomatis aktuator pompa/relay sesuai takaran pengisian.",
+        "Monitoring status transaksi dan volume secara digital via ESP32.",
+        "Repositori kode lengkap tersedia di GitHub.",
+      ],
+      en: [
+        "Automated pump/relay control calibrated to target dispensing volumes.",
+        "Digital volume and transaction telemetry powered by ESP32.",
+        "Complete source code and firmware documentation on GitHub.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/IoT_Gas_Station_Prototype_ESP32",
+    featured: false,
+  },
+  {
+    id: "dry-wet-trash-iot",
+    title: {
+      id: "Deteksi & Pemilahan Sampah Kering dan Basah Berbasis IoT",
+      en: "Dry and Wet Trash Detection With IoT Technology",
+    },
+    subtitle: {
+      id: "Tempat sampah pintar pemilah otomatis organik/basah dan kering",
+      en: "Automated smart waste segregation bin powered by IoT",
+    },
+    description: {
+      id: "Sistem tempat sampah pintar berbasis IoT yang mendeteksi dan memilah sampah basah serta kering secara otomatis menggunakan sensor kelembapan, aktuator mekanis, dan pemantauan kapasitas.",
+      en: "An IoT-enabled smart waste bin that automatically detects and separates dry and wet waste using moisture sensing, servo sorting mechanisms, and connected bin status monitoring.",
+    },
+    category: "IoT",
+    year: "2023",
+    badge: { id: "Smart Environment", en: "Smart Environment" },
+    techStack: ["Arduino / ESP32", "Moisture Sensor", "Servo", "Ultrasonic", "C++"],
+    highlights: {
+      id: [
+        "Klasifikasi otomatis sampah basah dan kering berbasis pembacaan sensor kelembapan.",
+        "Mekanisme pemilahan otomatis menggunakan motor servo.",
+        "Mendukung pengelolaan limbah cerdas dengan kode terbuka di GitHub.",
+      ],
+      en: [
+        "Automated wet vs. dry waste detection using moisture sensing.",
+        "Servo-driven mechanical sorting compartment for hands-free separation.",
+        "Supports smart waste management workflows with full code on GitHub.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/Trash-Wet-and-Dry-IoT-Project-",
+    featured: false,
+  },
+  {
+    id: "home-security-pir-esp32cam",
+    title: {
+      id: "Sistem Keamanan Rumah dengan Sensor PIR & ESP32-CAM",
+      en: "Home Security System with PIR & Camera Sensors (ESP32-CAM)",
+    },
+    subtitle: {
+      id: "Deteksi gerakan otomatis dan tangkapan kamera real-time",
+      en: "Motion-triggered surveillance & instant photo capture",
+    },
+    description: {
+      id: "Perancangan sistem keamanan rumah yang memadukan sensor gerak PIR dan modul kamera ESP32-CAM untuk mendeteksi intrusi, mengambil gambar otomatis, dan mengirimkan peringatan jarak jauh.",
+      en: "Design of a home security surveillance node combining a Passive Infrared (PIR) motion sensor with an ESP32-CAM module to detect intruders, capture snapshots automatically, and send remote alerts.",
+    },
+    category: "IoT",
+    year: "2024",
+    badge: { id: "ESP32-CAM · Security", en: "ESP32-CAM · Security" },
+    techStack: ["ESP32-CAM", "PIR Sensor", "WiFi", "C++", "IoT"],
+    highlights: {
+      id: [
+        "Deteksi pergerakan otomatis menggunakan sensor PIR berdaya rendah.",
+        "Pengambilan gambar instan melalui modul ESP32-CAM saat gerakan terdeteksi.",
+        "Dirancang ringkas dan terjangkau untuk keamanan hunian modern.",
+      ],
+      en: [
+        "Low-power passive infrared (PIR) motion trigger for intrusion detection.",
+        "Instant snapshot capture via ESP32-CAM whenever motion is detected.",
+        "Compact, cost-effective hardware design for residential security.",
+      ],
+    },
+    featured: false,
+  },
+  {
     id: "wireless-uir-web",
     title: {
       id: "Website Wireless Research UIR & Sistem Peminjaman Alat Lab",
@@ -595,38 +900,7 @@ export const projects: Project[] = [
       ],
     },
     liveUrl: "https://wireless.uir.ac.id",
-    featured: true,
-  },
-  {
-    id: "it-maintenance-app",
-    title: {
-      id: "Aplikasi Dokumentasi & Pelaporan Pemeliharaan IT Kampus",
-      en: "Institutional IT Maintenance & Asset Reporting App",
-    },
-    subtitle: {
-      id: "Manajemen tiket, diagnosa perangkat lab & laporan preventif",
-      en: "Lab hardware diagnostics & preventive maintenance tracker",
-    },
-    description: {
-      id: "Aplikasi internal untuk mendokumentasikan gangguan perangkat komputer, laboratorium akademik, dan peralatan IoT beserta riwayat pemeliharaan preventif dan penyelesaian masalah untuk pelaporan institusi.",
-      en: "An internal web application created to log hardware faults, IoT laboratory device diagnostics, preventive maintenance schedules, and issue resolutions for streamlined institutional reporting.",
-    },
-    category: "Web",
-    year: "2025",
-    badge: { id: "Sistem Internal", en: "Internal Tool" },
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MySQL"],
-    highlights: {
-      id: [
-        "Mencatat riwayat pemeliharaan preventif perangkat PC dan laboratorium IoT secara terstruktur.",
-        "Mempercepat pembuatan laporan teknis berkala bagi tim IT inti.",
-        "Meminimalkan downtime laboratorium melalui pelacakan masalah yang transparan.",
-      ],
-      en: [
-        "Centralized preventive maintenance logs for PCs, peripherals, and academic IoT labs.",
-        "Streamlined institutional technical reporting for the core IT department.",
-        "Reduced lab downtime through structured issue tracking and resolution history.",
-      ],
-    },
+    liveLabel: { id: "Live Site", en: "Live Site" },
     featured: false,
   },
   {
