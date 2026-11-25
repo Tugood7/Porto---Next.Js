@@ -61,14 +61,25 @@ export default function HomeClient({ latestPosts }: HomeClientProps) {
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6">
       {/* HERO SECTION */}
-      <section className="relative pt-8 pb-16 sm:pt-10 sm:pb-20">
+      <section className="relative pt-4 pb-16 sm:pt-8 sm:pb-20">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-12 left-1/2 -z-10 h-72 w-full max-w-2xl -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl dark:bg-emerald-500/12"
         />
 
-        <div className="grid items-center gap-8 md:grid-cols-12">
-          <div className="order-2 md:order-1 md:col-span-7">
+        {/* Free-roaming Full-Width 3D Lanyard Overlay (desktop: overlaps full Hero width so card can be dragged anywhere!) */}
+        <div className="relative z-20 -mx-4 -mt-4 md:pointer-events-none md:absolute md:inset-x-[-10vw] md:-top-8 md:mx-0">
+          <LanyardCard
+            photoSrc="/profile-cutout.png"
+            name={profile.name}
+            role="Software · IT · IoT Engineer"
+            gravity={-22}
+            desktopAnchorRatio={0.46}
+          />
+        </div>
+
+        <div className="relative z-10 grid items-center gap-8 md:min-h-[500px] md:grid-cols-12">
+          <div className="md:col-span-7">
             {/* Availability badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50/80 px-3 py-1 text-xs font-medium text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-300">
               <span className="relative flex h-2 w-2">
@@ -150,15 +161,8 @@ export default function HomeClient({ latestPosts }: HomeClientProps) {
             </div>
           </div>
 
-          {/* Interactive 3D Physics Lanyard ID Card */}
-          <div className="order-1 -mt-8 md:order-2 md:col-span-5 md:-mt-10">
-            <LanyardCard
-              photoSrc="/profile-cutout.png"
-              name={profile.name}
-              role="Software · IT · IoT Engineer"
-              gravity={-24}
-            />
-          </div>
+          {/* Spacer column on desktop where the 3D Lanyard naturally rests */}
+          <div className="hidden md:col-span-5 md:block" aria-hidden="true" />
         </div>
 
         {/* Key metrics strip */}

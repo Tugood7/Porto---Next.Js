@@ -26,10 +26,11 @@ export default function CustomCursor() {
     let rafId = 0;
 
     const resolveMode = (target: EventTarget | null): CursorMode => {
+      const lanyardEl = document.querySelector("[data-lanyard-state]");
+      const lanyardState = lanyardEl?.getAttribute("data-lanyard-state");
+      if (lanyardState === "grabbing") return "grabbing";
+      if (lanyardState === "grab") return "grab";
       if (!(target instanceof Element)) return "default";
-      const custom = target.closest("[data-cursor]")?.getAttribute("data-cursor");
-      if (custom === "grabbing") return "grabbing";
-      if (custom === "grab") return "grab";
       if (
         target.closest(
           'a, button, [role="button"], input, textarea, select, label'
