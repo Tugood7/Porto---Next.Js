@@ -22,6 +22,8 @@ export interface Project {
   badge?: LocalizedText;
   techStack: string[];
   highlights: LocalizedList;
+  image?: string;
+  imageFit?: "cover" | "contain";
   githubUrl?: string;
   liveUrl?: string;
   liveLabel?: LocalizedText;

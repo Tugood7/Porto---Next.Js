@@ -48,7 +48,7 @@ export const profile = {
       label: { id: "Hak Cipta Deep Learning", en: "Registered Deep Learning IP" },
     },
     {
-      value: "14+",
+      value: "19+",
       label: { id: "Proyek IoT, Web & AI", en: "IoT, Web & AI Projects" },
     },
   ],
@@ -482,6 +482,7 @@ export const projects: Project[] = [
     category: "IoT",
     year: "2024",
     badge: { id: "Diliput Media & Tugas Akhir", en: "Media Featured · Thesis" },
+    image: "/projects/air-quality.jpg",
     techStack: ["ESP32", "C++", "MQ-135", "MQ-2", "MQTT", "WiFi"],
     highlights: {
       id: [
@@ -501,6 +502,144 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "arm-robotic-esp32",
+    title: {
+      id: "Lengan Robot (Arm Robotic) Berbasis ESP32 & Servo",
+      en: "ESP32 Servo-Controlled Robotic Arm",
+    },
+    subtitle: {
+      id: "Prototipe lengan robot multi-aktuator terkendali mikrokontroler",
+      en: "Multi-axis servo robotic arm prototype driven by ESP32",
+    },
+    description: {
+      id: "Rancang bangun lengan robot (Arm Robotic) menggunakan mikrokontroler ESP32 dan motor servo untuk otomasi pergerakan presisi, kontrol sudut aktuator, serta demonstrasi mekanika robotika.",
+      en: "Design and assembly of a multi-servo robotic arm powered by an ESP32 microcontroller for precise angular actuation, pick-and-place automation, and robotics demonstrations.",
+    },
+    category: "IoT",
+    year: "2025",
+    badge: { id: "Robotika · ESP32", en: "Robotics · ESP32" },
+    image: "/projects/arm-robotic.jpg",
+    techStack: ["ESP32", "Servo Motor", "PWM Control", "C++", "Robotics"],
+    highlights: {
+      id: [
+        "Kontrol multi-servo sinkron menggunakan sinyal PWM dari mikrokontroler ESP32.",
+        "Kalibrasi sudut gerak lengan untuk manuver pengambilan objek secara halus.",
+        "Didemonstrasikan langsung pada unggahan proyek LinkedIn.",
+      ],
+      en: [
+        "Synchronized multi-servo PWM control driven by an ESP32 microcontroller.",
+        "Calibrated joint articulation for smooth object manipulation sequences.",
+        "Showcased in a live hardware demonstration post on LinkedIn.",
+      ],
+    },
+    liveUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7470295085952188417/",
+    liveLabel: { id: "Demo di LinkedIn", en: "LinkedIn Demo" },
+    featured: true,
+  },
+  {
+    id: "iot-blood-check",
+    title: {
+      id: "IoT Blood Check — Deteksi Golongan Darah Pintar",
+      en: "IoT Blood Check — Smart Blood Type Detection",
+    },
+    subtitle: {
+      id: "Sistem deteksi golongan darah otomatis berbasis sensor optik & OLED",
+      en: "Automated optical blood-type sensing prototype with OLED & cloud dashboard",
+    },
+    description: {
+      id: "Perangkat IoT biomedis yang mendeteksi golongan darah (A, B, AB, O) menggunakan sensor optik LED/LDR, menampilkannya pada layar OLED, dan mengirimkan hasilnya ke platform cloud untuk pencatatan digital.",
+      en: "A biomedical IoT prototype detecting blood groups via LED/LDR optical sensors, displaying results directly on an OLED screen, and streaming readings to a web monitoring dashboard.",
+    },
+    category: "IoT",
+    year: "2024",
+    badge: { id: "HealthTech · IoT", en: "HealthTech · IoT" },
+    image: "/projects/blood-check.jpg",
+    techStack: ["ESP32", "LDR / Optical Sensor", "OLED", "WiFi", "C++"],
+    highlights: {
+      id: [
+        "Pembacaan reaksi reagen golongan darah secara otomatis menggunakan sensor optik.",
+        "Tampilan hasil langsung pada layar OLED dan sinkronisasi ke website monitoring.",
+        "Kode sumber lengkap tersedia secara terbuka di GitHub.",
+      ],
+      en: [
+        "Automated optical reading of blood-typing reagent reactions.",
+        "Instant OLED readout paired with cloud web dashboard logging.",
+        "Open-source firmware and architecture available on GitHub.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/IoT_Blood_Check",
+    featured: true,
+  },
+  {
+    id: "smart-baby-scale",
+    title: {
+      id: "Timbangan & Pengukur Tinggi Bayi Pintar Berbasis IoT",
+      en: "IoT Smart Baby Scale & Growth Monitoring System",
+    },
+    subtitle: {
+      id: "Pemantauan berat & tinggi balita real-time terintegrasi dashboard web",
+      en: "Real-time infant weight & height measurement synced to web dashboard",
+    },
+    description: {
+      id: "Sistem timbangan bayi pintar berbasis ESP32 dengan sensor Loadcell (HX711) dan sensor ultrasonik yang mengukur berat serta panjang badan balita secara otomatis dan langsung tampil pada dashboard monitoring web.",
+      en: "An ESP32-powered smart baby scale combining a load cell (HX711) and ultrasonic height sensors to measure infant weight and length automatically with live web dashboard visualization.",
+    },
+    category: "IoT",
+    year: "2025",
+    badge: { id: "HealthTech · Posyandu IoT", en: "HealthTech · Posyandu IoT" },
+    image: "/projects/smart-baby-scale.jpg",
+    techStack: ["ESP32", "Loadcell HX711", "Ultrasonic", "LCD", "Web Dashboard"],
+    highlights: {
+      id: [
+        "Pengukuran otomatis berat dan tinggi badan bayi untuk mendukung pemantauan tumbuh kembang/stunting.",
+        "Tampilan data ganda: langsung di layar LCD perangkat dan dashboard web secara real-time.",
+        "Mempercepat pencatatan data pemeriksaan di posyandu maupun klinik.",
+      ],
+      en: [
+        "Automated infant weight and length measurement to support stunting and growth screening.",
+        "Dual-screen output via onboard LCD and live web dashboard.",
+        "Streamlines digital health recording for clinics and community health posts.",
+      ],
+    },
+    featured: true,
+  },
+  {
+    id: "flood-fuzzy-iot",
+    title: {
+      id: "Monitoring & Prediksi Dini Banjir IoT Menggunakan Logika Fuzzy",
+      en: "IoT Flood Monitoring & Early Prediction System Using Fuzzy Logic",
+    },
+    subtitle: {
+      id: "Sistem peringatan dini banjir cerdas berbasis Fuzzy Tsukamoto",
+      en: "Intelligent flood early-warning decision system using Fuzzy Logic",
+    },
+    description: {
+      id: "Sistem pemantauan dan prediksi dini banjir berbasis Internet of Things yang memadukan sensor ultrasonik, sensor hujan YL-83, serta sensor aliran air dengan inferensi Fuzzy Logic untuk menentukan status siaga secara cerdas.",
+      en: "An IoT-based flood monitoring and early prediction system combining ultrasonic, YL-83 rain, and water flow sensors with Fuzzy Logic inference for intelligent risk classification and alerts.",
+    },
+    category: "AI",
+    year: "2024",
+    badge: { id: "Fuzzy Logic · IoT", en: "Fuzzy Logic · IoT" },
+    image: "/projects/flood-fuzzy.jpg",
+    imageFit: "contain",
+    techStack: ["ESP32", "Fuzzy Logic", "HC-SR04", "YL-83 Rain", "LCD I2C", "C++"],
+    highlights: {
+      id: [
+        "Penerapan Fuzzy Inference System (metode Tsukamoto) untuk mengklasifikasikan tingkat risiko banjir.",
+        "Integrasi multi-sensor (ketinggian air, curah hujan, debit air) dengan alarm buzzer & dashboard.",
+        "Kode sumber lengkap tersedia di GitHub.",
+      ],
+      en: [
+        "Applied Fuzzy Inference System (Tsukamoto method) for adaptive flood alert classification.",
+        "Multi-sensor integration (water level, rainfall, flow rate) with buzzer alarm and dashboard.",
+        "Full source code hosted publicly on GitHub.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/Flood-Detection-IoT-with-Fuzzy-Logic",
+    featured: true,
+  },
+  {
     id: "pke-report-web",
     title: {
       id: "PKE (Perbaikan Komputer & Elektronik) — Web Pelaporan Teknisi",
@@ -517,6 +656,7 @@ export const projects: Project[] = [
     category: "Web",
     year: "2025",
     badge: { id: "Web Aplikasi · Laravel", en: "Web App · Laravel" },
+    image: "/projects/pke-report.jpg",
     techStack: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap"],
     highlights: {
       id: [
@@ -537,6 +677,72 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "tucalc-smart-calculator",
+    title: {
+      id: "TuCalc — Kalkulator Pintar Layar Sentuh TFT (v1.0)",
+      en: "TuCalc — Embedded TFT Touchscreen Smart Calculator (v1.0)",
+    },
+    subtitle: {
+      id: "Antarmuka kalkulator layar sentuh kustom berbasis mikrokontroler",
+      en: "Custom embedded GUI smart calculator built on a TFT touch shield",
+    },
+    description: {
+      id: "Pengembangan perangkat kalkulator pintar portabel dengan layar sentuh TFT warna, menampilkan splash screen kustom \"TuCalc Smart Calculator v1.0\" serta antarmuka tombol sentuh responsif yang dibangun dengan C++.",
+      en: "A handheld embedded smart calculator featuring a color TFT touchscreen, custom \"TuCalc Smart Calculator v1.0\" boot splash screen, and responsive touch keypad UI programmed in C++.",
+    },
+    category: "IoT",
+    year: "2025",
+    badge: { id: "Embedded GUI · TFT", en: "Embedded GUI · TFT" },
+    image: "/projects/tucalc.jpg",
+    techStack: ["Arduino", "TFT Touchscreen", "C++", "Embedded UI"],
+    highlights: {
+      id: [
+        "Desain antarmuka grafis dan kalibrasi koordinat layar sentuh TFT secara mandiri.",
+        "Dilengkapi animasi loading splash screen kustom dan operasi aritmatika real-time.",
+        "Dibangun sebagai perangkat genggam mandiri bertenaga USB.",
+      ],
+      en: [
+        "Custom graphical interface and resistive touch coordinate calibration on TFT display.",
+        "Features custom boot progress animation and instant arithmetic evaluation.",
+        "Self-contained USB-powered handheld embedded device.",
+      ],
+    },
+    featured: false,
+  },
+  {
+    id: "smart-parking-iot",
+    title: {
+      id: "Sistem Parkir Pintar (Smart Parking) Berbasis IoT",
+      en: "IoT Smart Parking Slot & Automated Gate System",
+    },
+    subtitle: {
+      id: "Pemantauan ketersediaan slot parkir, palang servo, & lampu indikator",
+      en: "Real-time parking slot counter with IR sensors, servo barrier, and traffic LED",
+    },
+    description: {
+      id: "Prototipe sistem parkir otomatis menggunakan sensor inframerah (IR), palang pintu motor servo, lampu lalu lintas indikator merah-kuning-hijau, serta layar LCD 16x2 yang menampilkan jumlah slot parkir tersedia secara real-time.",
+      en: "An automated smart parking prototype integrating IR vehicle sensors, a servo barrier gate, traffic indicator LEDs, and a 16x2 LCD displaying live available parking slots.",
+    },
+    category: "IoT",
+    year: "2025",
+    badge: { id: "Smart City · IoT", en: "Smart City · IoT" },
+    image: "/projects/smart-parking.jpg",
+    techStack: ["Arduino / ESP32", "IR Sensor", "Servo Gate", "LCD 16x2", "C++"],
+    highlights: {
+      id: [
+        "Penghitungan otomatis ketersediaan slot parkir secara real-time pada layar LCD.",
+        "Kontrol palang pintu servo otomatis dan lampu indikator status parkir penuh/tersedia.",
+        "Model penerapan otomatisasi infrastruktur Smart City skala prototipe.",
+      ],
+      en: [
+        "Live slot availability counter displayed directly on an onboard 16x2 LCD.",
+        "Automated servo gate barrier paired with red/yellow/green status indicator lights.",
+        "Compact smart-city parking automation prototype.",
+      ],
+    },
+    featured: false,
+  },
+  {
     id: "smart-door-esp32cam",
     title: {
       id: "Sistem Keamanan Pintu Pintar dengan Smart Bell & Face Recognition",
@@ -553,6 +759,7 @@ export const projects: Project[] = [
     category: "IoT",
     year: "2024",
     badge: { id: "ESP32-CAM · Smart Security", en: "ESP32-CAM · Smart Security" },
+    image: "/projects/smart-door.jpg",
     techStack: ["ESP32-CAM", "Solenoid Lock", "Face Recognition", "C++", "WiFi"],
     highlights: {
       id: [
@@ -567,140 +774,6 @@ export const projects: Project[] = [
       ],
     },
     githubUrl: "https://github.com/TuBagus7/ESP32-Cam-Smart-Bell",
-    featured: true,
-  },
-  {
-    id: "flood-fuzzy-iot",
-    title: {
-      id: "Monitoring & Prediksi Dini Banjir IoT Menggunakan Logika Fuzzy",
-      en: "IoT Flood Monitoring & Early Prediction System Using Fuzzy Logic",
-    },
-    subtitle: {
-      id: "Sistem peringatan dini banjir cerdas berbasis keputusan Fuzzy Logic",
-      en: "Intelligent flood early-warning decision system powered by Fuzzy Logic",
-    },
-    description: {
-      id: "Sistem pemantauan dan prediksi dini banjir berbasis Internet of Things yang menerapkan algoritma Fuzzy Logic untuk pengambilan keputusan tingkat siaga secara cerdas dan akurat berdasarkan data sensor lingkungan.",
-      en: "An IoT-based flood monitoring and early prediction system applying Fuzzy Logic for intelligent, multi-parameter risk classification and automated early-warning decision-making.",
-    },
-    category: "AI",
-    year: "2024",
-    badge: { id: "Fuzzy Logic · IoT", en: "Fuzzy Logic · IoT" },
-    techStack: ["ESP32", "Fuzzy Logic", "Water Level Sensor", "C++", "IoT"],
-    highlights: {
-      id: [
-        "Penerapan inferensi Fuzzy Logic untuk mengklasifikasikan tingkat risiko banjir secara adaptif.",
-        "Pemantauan ketinggian air dan parameter lingkungan secara kontinu dan real-time.",
-        "Dirancang sebagai sistem peringatan dini untuk mendukung mitigasi bencana.",
-      ],
-      en: [
-        "Implemented Fuzzy Logic inference to adaptively classify flood alert levels.",
-        "Continuous real-time monitoring of water levels and environmental indicators.",
-        "Engineered as an automated early-warning architecture for disaster mitigation.",
-      ],
-    },
-    githubUrl: "https://github.com/TuBagus7/Flood-Detection-IoT-with-Fuzzy-Logic",
-    featured: true,
-  },
-  {
-    id: "deep-learning-patient",
-    title: {
-      id: "Deteksi Ketidaknormalan Data Pasien Berbasis Deep Learning",
-      en: "Deep Learning Patient Anomaly Detection on Cloud",
-    },
-    subtitle: {
-      id: "Algoritma AI kesehatan terdaftar Hak Kekayaan Intelektual (HKI)",
-      en: "Registered IP healthcare AI analytics architecture",
-    },
-    description: {
-      id: "Sistem analisis ketidaknormalan data medis pasien berbasis Deep Learning yang berjalan di infrastruktur Cloud Computing untuk membantu identifikasi dini anomali kesehatan secara akurat dan skalabel.",
-      en: "A cloud-hosted Deep Learning algorithm engineered to detect anomalies in patient health records, enabling scalable and timely clinical anomaly screening. Officially registered as Intellectual Property (HKI).",
-    },
-    category: "AI",
-    year: "2024",
-    badge: { id: "Terdaftar HKI", en: "Registered IP (HKI)" },
-    techStack: ["Python", "Deep Learning", "Cloud Computing", "Jupyter Notebook"],
-    highlights: {
-      id: [
-        "Pencatatan resmi Surat Pencatatan Ciptaan (HKI) atas algoritma analisis anomali pasien.",
-        "Arsitektur model Deep Learning yang dioptimalkan untuk inferensi berbasis Cloud Computing.",
-        "Alur pra-pemrosesan data medis terstruktur untuk meminimalkan false-positive.",
-      ],
-      en: [
-        "Officially certified under Indonesia's Intellectual Property registry (Surat Pencatatan Ciptaan).",
-        "Deep learning pipeline engineered for scalable cloud-based inference.",
-        "Structured preprocessing pipeline tailored to detect subtle anomalies in clinical metrics.",
-      ],
-    },
-    githubUrl: "https://github.com/Tugood7",
-    featured: true,
-  },
-  {
-    id: "irex-2024-iot",
-    title: {
-      id: "Inovasi IoT Peraih Gold Award IREX 2024",
-      en: "IREX 2024 Gold Award IoT Innovation",
-    },
-    subtitle: {
-      id: "Solusi cerdas Industri 4.0 di UiTM Malaysia",
-      en: "Industry 4.0 smart hardware solution at UiTM Malaysia",
-    },
-    description: {
-      id: "Solusi perangkat keras dan konektivitas IoT generasi Industri 4.0 yang berhasil meraih Gold Award pada International Industrial Revolution 4.0 Exposition (IREX) 2024 di Universiti Teknologi Mara, Malaysia.",
-      en: "An end-to-end Industry 4.0 IoT hardware and software prototype that earned the Gold Award at the International Industrial Revolution 4.0 Exposition (IREX) 2024 hosted by Universiti Teknologi Mara, Malaysia.",
-    },
-    category: "IoT",
-    year: "2024",
-    badge: { id: "Gold Award · Malaysia", en: "Gold Award · Malaysia" },
-    techStack: ["ESP32", "Arduino", "MQTT", "Cloud IoT", "C++"],
-    highlights: {
-      id: [
-        "Meraih Gold Award pada eksposisi internasional Industri 4.0 di Malaysia.",
-        "Integrasi perangkat keras mikrokontroler, protokol komunikasi ringan, dan dasbor pemantauan.",
-        "Dirancang dengan fokus efisiensi daya dan kemudahan penerapan di lapangan.",
-      ],
-      en: [
-        "Awarded Gold Medal at an international Industry 4.0 exposition in Malaysia.",
-        "Seamless integration of embedded firmware, lightweight messaging, and cloud monitoring.",
-        "Engineered for practical field deployment and reliable connectivity.",
-      ],
-    },
-    githubUrl: "https://github.com/Tugood7",
-    featured: true,
-  },
-  {
-    id: "arm-robotic-esp32",
-    title: {
-      id: "Lengan Robot (Arm Robotic) Berbasis ESP32 & Servo",
-      en: "ESP32 Servo-Controlled Robotic Arm",
-    },
-    subtitle: {
-      id: "Prototipe lengan robot multi-aktuator terkendali mikrokontroler",
-      en: "Multi-axis servo robotic arm prototype driven by ESP32",
-    },
-    description: {
-      id: "Rancang bangun lengan robot (Arm Robotic) menggunakan mikrokontroler ESP32 dan motor servo untuk otomasi pergerakan presisi, kontrol sudut aktuator, serta demonstrasi mekanika robotika.",
-      en: "Design and assembly of a multi-servo robotic arm powered by an ESP32 microcontroller for precise angular actuation, pick-and-place automation, and robotics demonstrations.",
-    },
-    category: "IoT",
-    year: "2025",
-    badge: { id: "Robotika · ESP32", en: "Robotics · ESP32" },
-    techStack: ["ESP32", "Servo Motor", "PWM Control", "C++", "Robotics"],
-    highlights: {
-      id: [
-        "Kontrol multi-servo sinkron menggunakan sinyal PWM dari mikrokontroler ESP32.",
-        "Kalibrasi sudut gerak lengan untuk manuver pengambilan objek secara halus.",
-        "Didemonstrasikan langsung pada unggahan proyek LinkedIn.",
-      ],
-      en: [
-        "Synchronized multi-servo PWM control driven by an ESP32 microcontroller.",
-        "Calibrated joint articulation for smooth object manipulation sequences.",
-        "Showcased in a live hardware demonstration post on LinkedIn.",
-      ],
-    },
-    liveUrl:
-      "https://www.linkedin.com/feed/update/urn:li:activity:7470295085952188417/",
-    liveLabel: { id: "Demo di LinkedIn", en: "LinkedIn Demo" },
     featured: false,
   },
   {
@@ -710,65 +783,33 @@ export const projects: Project[] = [
       en: "Non-Invasive Glucose Level Measurement Prototype",
     },
     subtitle: {
-      id: "Perangkat kesehatan pintar tanpa jarum berbasis sensor optik & IoT",
-      en: "Needle-free smart healthcare sensing prototype",
+      id: "Perangkat kesehatan pintar tanpa jarum berbasis sensor optik & LCD",
+      en: "Needle-free smart healthcare sensing prototype with LCD readout",
     },
     description: {
-      id: "Prototipe perangkat kesehatan untuk mengestimasi kadar glukosa darah secara non-invasif (tanpa melukai kulit) menggunakan pendekatan sensor biomedis dan pemrosesan sinyal mikrokontroler.",
-      en: "A biomedical hardware prototype designed to estimate blood glucose levels non-invasively (needle-free) through optical sensing and embedded microcontroller signal processing.",
+      id: "Prototipe perangkat kesehatan untuk mengestimasi kadar glukosa darah (mg/dL) secara non-invasif (tanpa jarum) menggunakan pendekatan sensor optik jari dan pemrosesan sinyal mikrokontroler.",
+      en: "A biomedical hardware prototype designed to estimate blood glucose levels (mg/dL) non-invasively (needle-free) through finger optical sensing and embedded microcontroller signal processing.",
     },
     category: "IoT",
     year: "2024",
     badge: { id: "Biomedical IoT", en: "Biomedical IoT" },
-    techStack: ["ESP32", "Optical Sensor", "Biomedical IoT", "C++"],
+    image: "/projects/non-invasive-glucose.jpg",
+    techStack: ["ESP32", "Optical Sensor", "LCD 16x2", "Biomedical IoT", "C++"],
     highlights: {
       id: [
-        "Pendekatan pengukuran glukosa non-invasif yang lebih nyaman dan higienis bagi pengguna.",
-        "Pemrosesan pembacaan sensor secara real-time pada perangkat mikrokontroler.",
-        "Dilengkapi dokumentasi dan demonstrasi pengujian prototipe.",
+        "Pendekatan pengukuran kadar gula darah non-invasif yang nyaman tanpa melukai kulit.",
+        "Menampilkan hasil estimasi kadar glukosa (mg/dL) langsung pada layar LCD perangkat.",
+        "Dilengkapi dokumentasi dan video pengujian prototipe.",
       ],
       en: [
-        "Explores comfortable, needle-free blood glucose estimation using optical sensing.",
-        "Real-time embedded signal sampling and processing on microcontroller hardware.",
+        "Explores comfortable, needle-free blood glucose estimation using finger optical sensing.",
+        "Displays real-time estimated glucose readings (mg/dL) directly on the LCD screen.",
         "Accompanied by prototype test documentation and demo footage.",
       ],
     },
     liveUrl:
       "https://drive.google.com/file/d/1-NtjA5N5uI740vA7boxiq4kBlJyy-YQw/view?usp=sharing",
     liveLabel: { id: "Demo / Dokumentasi", en: "Demo / Docs" },
-    featured: false,
-  },
-  {
-    id: "iot-blood-check",
-    title: {
-      id: "IoT Blood Check — Pemantauan Kesehatan Darah",
-      en: "IoT Blood Check — Smart Health Monitoring",
-    },
-    subtitle: {
-      id: "Sistem pemantauan parameter kesehatan berbasis IoT",
-      en: "Connected biomedical health check prototype",
-    },
-    description: {
-      id: "Proyek perangkat IoT untuk membantu pemeriksaan dan pemantauan indikator kesehatan darah secara terhubung dengan pengiriman data digital untuk kemudahan pencatatan.",
-      en: "An IoT healthcare prototype built to capture and transmit blood health check readings digitally for streamlined monitoring and record keeping.",
-    },
-    category: "IoT",
-    year: "2024",
-    badge: { id: "HealthTech · IoT", en: "HealthTech · IoT" },
-    techStack: ["ESP32", "Biomedical Sensors", "WiFi", "C++"],
-    highlights: {
-      id: [
-        "Akuisisi data sensor kesehatan secara otomatis dan terstruktur.",
-        "Integrasi konektivitas nirkabel untuk pemantauan jarak jauh.",
-        "Kode sumber tersedia secara terbuka di GitHub.",
-      ],
-      en: [
-        "Automated biometric sensor acquisition with digital telemetry output.",
-        "Wireless connectivity for remote health data visibility.",
-        "Open-source firmware and project schematics hosted on GitHub.",
-      ],
-    },
-    githubUrl: "https://github.com/TuBagus7/IoT_Blood_Check",
     featured: false,
   },
   {
@@ -788,6 +829,8 @@ export const projects: Project[] = [
     category: "IoT",
     year: "2024",
     badge: { id: "Smart Automation", en: "Smart Automation" },
+    image: "/projects/gas-station.png",
+    imageFit: "contain",
     techStack: ["ESP32", "Flow Sensor", "Relay Control", "WiFi", "C++"],
     highlights: {
       id: [
@@ -821,6 +864,7 @@ export const projects: Project[] = [
     category: "IoT",
     year: "2023",
     badge: { id: "Smart Environment", en: "Smart Environment" },
+    image: "/projects/dry-wet-trash.jpg",
     techStack: ["Arduino / ESP32", "Moisture Sensor", "Servo", "Ultrasonic", "C++"],
     highlights: {
       id: [
@@ -854,6 +898,8 @@ export const projects: Project[] = [
     category: "IoT",
     year: "2024",
     badge: { id: "ESP32-CAM · Security", en: "ESP32-CAM · Security" },
+    image: "/projects/home-security.jpg",
+    imageFit: "contain",
     techStack: ["ESP32-CAM", "PIR Sensor", "WiFi", "C++", "IoT"],
     highlights: {
       id: [
@@ -867,6 +913,142 @@ export const projects: Project[] = [
         "Compact, cost-effective hardware design for residential security.",
       ],
     },
+    featured: false,
+  },
+  {
+    id: "rumah-laundry-web",
+    title: {
+      id: "Rumah Laundry — Sistem Informasi Manajemen Laundry",
+      en: "Rumah Laundry — Laundry Business Management Web App",
+    },
+    subtitle: {
+      id: "Aplikasi web pengelolaan order, paket cuci, & laporan transaksi",
+      en: "Web platform for managing laundry orders, service packages, and billing",
+    },
+    description: {
+      id: "Aplikasi web manajemen operasional usaha laundry yang mencakup dashboard transaksi, pemilihan kategori layanan (cuci komplit, dry clean, satuan), manajemen pelanggan, serta riwayat order secara terpusat.",
+      en: "A full-featured laundry management web application featuring a transaction dashboard, tiered service selection, customer management, and centralized order tracking.",
+    },
+    category: "Web",
+    year: "2024",
+    badge: { id: "Web App · Full-Stack", en: "Web App · Full-Stack" },
+    image: "/projects/rumah-laundry.png",
+    imageFit: "contain",
+    techStack: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
+    highlights: {
+      id: [
+        "Dashboard ringkas untuk memantau total order, status pengerjaan, dan rekap transaksi.",
+        "Dukungan berbagai paket layanan laundry (cuci komplit, dry clean, satuan).",
+        "Kode sumber tersedia di GitHub.",
+      ],
+      en: [
+        "Clean administrative dashboard for tracking order counts, status, and revenue.",
+        "Supports multiple laundry service tiers and itemized order billing.",
+        "Source code hosted on GitHub.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/Rumah-Laundry-",
+    featured: false,
+  },
+  {
+    id: "administrasi-sekolah-laravel",
+    title: {
+      id: "Sistem Informasi Administrasi Sekolah (Laravel)",
+      en: "School Administration Information System (Laravel)",
+    },
+    subtitle: {
+      id: "Platform digital pengelolaan data siswa, kelas, & administrasi akademik",
+      en: "Digital web platform for student records and school administration",
+    },
+    description: {
+      id: "Aplikasi web administrasi sekolah berbasis Laravel untuk mendigitalisasi pengelolaan data akademik, administrasi siswa, dan pelaporan operasional sekolah agar lebih cepat dan terstruktur.",
+      en: "A Laravel-based school administration web application built to digitize student data management, administrative workflows, and institutional reporting.",
+    },
+    category: "Web",
+    year: "2024",
+    badge: { id: "Laravel · EduTech", en: "Laravel · EduTech" },
+    image: "/projects/administrasi-sekolah.png",
+    imageFit: "contain",
+    techStack: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+    highlights: {
+      id: [
+        "Arsitektur MVC Laravel yang terstruktur untuk pengelolaan data administrasi sekolah.",
+        "Mempercepat pencatatan, pencarian, dan rekap laporan administrasi siswa.",
+        "Tersedia di repositori GitHub.",
+      ],
+      en: [
+        "Structured Laravel MVC architecture tailored for school administration records.",
+        "Speeds up student data entry, lookup, and administrative reporting.",
+        "Available on GitHub.",
+      ],
+    },
+    githubUrl: "https://github.com/TuBagus7/Administrasi_Sekolah_Laravel",
+    featured: false,
+  },
+  {
+    id: "deep-learning-patient",
+    title: {
+      id: "Deteksi Ketidaknormalan Data Pasien Berbasis Deep Learning",
+      en: "Deep Learning Patient Anomaly Detection on Cloud",
+    },
+    subtitle: {
+      id: "Algoritma AI kesehatan terdaftar Hak Kekayaan Intelektual (HKI)",
+      en: "Registered IP healthcare AI analytics architecture",
+    },
+    description: {
+      id: "Sistem analisis ketidaknormalan data medis pasien berbasis Deep Learning yang berjalan di infrastruktur Cloud Computing untuk membantu identifikasi dini anomali kesehatan secara akurat dan skalabel.",
+      en: "A cloud-hosted Deep Learning algorithm engineered to detect anomalies in patient health records, enabling scalable and timely clinical anomaly screening. Officially registered as Intellectual Property (HKI).",
+    },
+    category: "AI",
+    year: "2024",
+    badge: { id: "Terdaftar HKI", en: "Registered IP (HKI)" },
+    techStack: ["Python", "Deep Learning", "Cloud Computing", "Jupyter Notebook"],
+    highlights: {
+      id: [
+        "Pencatatan resmi Surat Pencatatan Ciptaan (HKI) atas algoritma analisis anomali pasien.",
+        "Arsitektur model Deep Learning yang dioptimalkan untuk inferensi berbasis Cloud Computing.",
+        "Alur pra-pemrosesan data medis terstruktur untuk meminimalkan false-positive.",
+      ],
+      en: [
+        "Officially certified under Indonesia's Intellectual Property registry (Surat Pencatatan Ciptaan).",
+        "Deep learning pipeline engineered for scalable cloud-based inference.",
+        "Structured preprocessing pipeline tailored to detect subtle anomalies in clinical metrics.",
+      ],
+    },
+    githubUrl: "https://github.com/Tugood7",
+    featured: false,
+  },
+  {
+    id: "irex-2024-iot",
+    title: {
+      id: "Inovasi IoT Peraih Gold Award IREX 2024",
+      en: "IREX 2024 Gold Award IoT Innovation",
+    },
+    subtitle: {
+      id: "Solusi cerdas Industri 4.0 di UiTM Malaysia",
+      en: "Industry 4.0 smart hardware solution at UiTM Malaysia",
+    },
+    description: {
+      id: "Solusi perangkat keras dan konektivitas IoT generasi Industri 4.0 yang berhasil meraih Gold Award pada International Industrial Revolution 4.0 Exposition (IREX) 2024 di Universiti Teknologi Mara, Malaysia.",
+      en: "An end-to-end Industry 4.0 IoT hardware and software prototype that earned the Gold Award at the International Industrial Revolution 4.0 Exposition (IREX) 2024 hosted by Universiti Teknologi Mara, Malaysia.",
+    },
+    category: "IoT",
+    year: "2024",
+    badge: { id: "Gold Award · Malaysia", en: "Gold Award · Malaysia" },
+    techStack: ["ESP32", "Arduino", "MQTT", "Cloud IoT", "C++"],
+    highlights: {
+      id: [
+        "Meraih Gold Award pada eksposisi internasional Industri 4.0 di Malaysia.",
+        "Integrasi perangkat keras mikrokontroler, protokol komunikasi ringan, dan dasbor pemantauan.",
+        "Dirancang dengan fokus efisiensi daya dan kemudahan penerapan di lapangan.",
+      ],
+      en: [
+        "Awarded Gold Medal at an international Industry 4.0 exposition in Malaysia.",
+        "Seamless integration of embedded firmware, lightweight messaging, and cloud monitoring.",
+        "Engineered for practical field deployment and reliable connectivity.",
+      ],
+    },
+    githubUrl: "https://github.com/Tugood7",
     featured: false,
   },
   {
