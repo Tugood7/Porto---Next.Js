@@ -20,3 +20,16 @@
     @apply bg-emerald-500/20 text-emerald-900 dark:bg-emerald-400/25 dark:text-emerald-200;
   }
 }
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}

@@ -61,13 +61,13 @@ export default function AboutClient() {
         </div>
 
         <div className="shrink-0">
-          <div className="h-32 w-32 overflow-hidden rounded-3xl border border-zinc-200 bg-white p-1.5 shadow-sm sm:h-40 sm:w-40 dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="animate-float-slow relative h-44 w-40 overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-b from-emerald-500/10 via-zinc-100 to-zinc-200/70 p-2 pb-0 shadow-sm sm:h-52 sm:w-44 dark:border-zinc-800 dark:from-emerald-500/15 dark:via-zinc-900 dark:to-zinc-950">
             <Image
-              src="/logo.jpg"
+              src="/profile-cutout.png"
               alt={profile.name}
-              width={160}
-              height={160}
-              className="h-full w-full rounded-2xl object-cover"
+              width={220}
+              height={260}
+              className="h-full w-full object-contain object-bottom drop-shadow-md"
             />
           </div>
         </div>

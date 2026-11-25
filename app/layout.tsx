@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import CustomCursor from "@/app/components/CustomCursor";
 import { AppProviders } from "@/app/context/AppProviders";
 
 const geistSans = Geist({
@@ -64,6 +65,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans`}
       >
         <AppProviders>
+          <CustomCursor />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
