@@ -55,6 +55,24 @@ export interface SkillGroup {
   skills: string[];
 }
 
+export interface StatItem {
+  id: string;
+  value: string;
+  label: LocalizedText;
+  badge: LocalizedText;
+  title: LocalizedText;
+  issuer: string;
+  period: string;
+  description: LocalizedText;
+  highlights: LocalizedList;
+  accent: "emerald" | "amber" | "violet" | "sky";
+  certificateImage?: string;
+  certificateUrl?: string;
+  certificateNote?: LocalizedText;
+  actionHref?: string;
+  actionLabel?: LocalizedText;
+}
+
 export interface PostSection {
   heading?: LocalizedText;
   paragraphs: LocalizedList;

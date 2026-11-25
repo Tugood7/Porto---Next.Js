@@ -12,13 +12,15 @@ import {
   skillGroups,
   uiText,
 } from "@/data/portfolio";
-import { Post, ProjectCategory } from "@/interfaces/post";
+import { Post, ProjectCategory, StatItem } from "@/interfaces/post";
 import ProjectCard from "./ProjectCard";
 import PostList from "./PostList";
 import ContactSection from "./ContactSection";
 import Reveal from "./Reveal";
+import StatModal from "./StatModal";
 import {
   ArrowRightIcon,
+  ArrowUpRightIcon,
   AwardIcon,
   GithubIcon,
   GraduationCapIcon,
@@ -45,6 +47,7 @@ export default function HomeClient({ latestPosts }: HomeClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<
     "ALL" | ProjectCategory
   >("ALL");
+  const [activeStat, setActiveStat] = useState<StatItem | null>(null);
 
   const visibleProjects =
     selectedCategory === "ALL"
@@ -165,22 +168,29 @@ export default function HomeClient({ latestPosts }: HomeClientProps) {
           <div className="hidden md:col-span-5 md:block" aria-hidden="true" />
         </div>
 
-        {/* Key metrics strip */}
+        {/* Key metrics strip — interactive clickable cards */}
         <Reveal delay={80} className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {profile.stats.map((stat) => (
-            <div
-              key={stat.value}
-              className="rounded-2xl border border-zinc-200/80 bg-white px-4 py-4 transition-transform duration-200 hover:-translate-y-0.5 dark:border-zinc-800 dark:bg-zinc-900/50"
+            <button
+              key={stat.id}
+              type="button"
+              onClick={() => setActiveStat(stat)}
+              className="group relative rounded-2xl border border-zinc-200/80 bg-white px-4 py-4 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-400/70 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-emerald-500/50 dark:hover:bg-zinc-900"
             >
-              <p className="font-mono text-xl font-bold tracking-tight text-zinc-950 sm:text-2xl dark:text-white">
-                {stat.value}
-              </p>
+              <div className="flex items-start justify-between gap-2">
+                <p className="font-mono text-xl font-bold tracking-tight text-zinc-950 transition-colors group-hover:text-emerald-600 sm:text-2xl dark:text-white dark:group-hover:text-emerald-400">
+                  {stat.value}
+                </p>
+                <ArrowUpRightIcon className="mt-1 h-3.5 w-3.5 shrink-0 text-zinc-300 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-emerald-500 dark:text-zinc-600 dark:group-hover:text-emerald-400" />
+              </div>
               <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
                 {stat.label[lang]}
               </p>
-            </div>
+            </button>
           ))}
         </Reveal>
+
+        <StatModal stat={activeStat} onClose={() => setActiveStat(null)} />
       </section>
 
       {/* ABOUT SNAPSHOT */}

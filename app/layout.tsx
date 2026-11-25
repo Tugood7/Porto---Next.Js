@@ -17,12 +17,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://porto.tugoodly.my.id"),
   title: {
     default: "Tu Bagus Dwi Fikri — Software, IT & IoT Engineer",
     template: "%s | Tu Bagus Dwi Fikri",
   },
   description:
     "Portfolio of Tu Bagus Dwi Fikri — Software Engineer, IT Programmer, and IoT Engineer specializing in Internet of Things, Web Development, and Artificial Intelligence.",
+  openGraph: {
+    title: "Tu Bagus Dwi Fikri — Software, IT & IoT Engineer",
+    description:
+      "Portfolio of Tu Bagus Dwi Fikri — IoT, Full-Stack Web Development, and Artificial Intelligence.",
+    url: "https://porto.tugoodly.my.id",
+    siteName: "Tu Bagus Portfolio",
+    type: "website",
+  },
   keywords: [
     "Tu Bagus Dwi Fikri",
     "Portfolio",

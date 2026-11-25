@@ -5,6 +5,7 @@ import {
   Post,
   Project,
   SkillGroup,
+  StatItem,
 } from "@/interfaces/post";
 
 export const profile = {
@@ -36,28 +37,148 @@ export const profile = {
   } satisfies LocalizedText,
   stats: [
     {
+      id: "gpa-uir",
       value: "3.79",
       label: { id: "IPK / 4.00 (S1 Informatika)", en: "GPA / 4.00 (Computer Science)" },
+      badge: { id: "Pendidikan Sarjana", en: "Bachelor's Degree" },
+      title: {
+        id: "Sarjana Teknik Informatika",
+        en: "Bachelor of Computer Science",
+      },
+      issuer: "Universitas Islam Riau — Pekanbaru",
+      period: "2020 – 2024",
+      accent: "emerald",
+      description: {
+        id: "Lulus dengan predikat sangat memuaskan (IPK 3.79 dari 4.00) dengan fokus riset pada Internet of Things, sistem tertanam, dan pengembangan perangkat lunak.",
+        en: "Graduated with honors (GPA 3.79 / 4.00), focusing on Internet of Things, embedded systems, and software engineering.",
+      },
+      highlights: {
+        id: [
+          'Tugas Akhir: "Monitoring Kualitas Udara dan Emisi Asap di Halte Bus Perkotaan Menggunakan Teknologi IoT dengan Sensor MQ-135 dan MQ-2".',
+          "Inovasi riset dipublikasikan di portal resmi Universitas Islam Riau (uir.ac.id) dan diliput media GoRiau.com.",
+          "Aktif sebagai Asisten Dosen Praktikum Lab Informatika dan Ketua Organisasi Riset Robotika & Wireless (RAWR UIR).",
+        ],
+        en: [
+          'Final Thesis: "Air Quality and Smoke Emission Monitoring at Urban Bus Stops Using IoT Technology with MQ-135 and MQ-2 Sensors".',
+          "Featured on Universitas Islam Riau's official website (uir.ac.id) and GoRiau.com for innovative environmental research.",
+          "Served as Practicum Teaching Assistant and Lead of Robotic Automation & Wireless Research (RAWR UIR).",
+        ],
+      },
+      certificateNote: {
+        id: "Ijazah & Transkrip S1 Teknik Informatika · Universitas Islam Riau",
+        en: "Bachelor of Computer Science Diploma & Transcript · UIR",
+      },
+      actionHref: "/about",
+      actionLabel: { id: "Lihat Riwayat Pendidikan & Pengalaman", en: "View Full Education & Experience" },
     },
     {
+      id: "gold-irex",
       value: "Gold",
       label: { id: "IREX 2024, UiTM Malaysia", en: "IREX 2024, UiTM Malaysia" },
+      badge: { id: "Penghargaan Internasional", en: "International Gold Award" },
+      title: {
+        id: "Gold Award — International Industrial Revolution 4.0 Exposition (IREX 2024)",
+        en: "Gold Award — International Industrial Revolution 4.0 Exposition (IREX 2024)",
+      },
+      issuer: "Universiti Teknologi Mara (UiTM), Malaysia",
+      period: "2024",
+      accent: "amber",
+      description: {
+        id: "Meraih Medali Emas (Gold Award) pada ajang eksposisi inovasi Industri 4.0 tingkat internasional di Universiti Teknologi Mara, Malaysia, melalui karya solusi perangkat keras dan sistem cerdas berbasis IoT.",
+        en: "Awarded the Gold Medal at the International Industrial Revolution 4.0 Exposition (IREX) hosted by Universiti Teknologi Mara, Malaysia, recognizing innovative IoT hardware and smart system design.",
+      },
+      highlights: {
+        id: [
+          "Menyabet kategori tertinggi (Gold Award) di kompetisi eksposisi internasional Industri 4.0 Malaysia.",
+          "Mengintegrasikan sensor, mikrokontroler ESP32/Arduino, dan konektivitas cloud untuk pemecahan masalah nyata.",
+          "Terverifikasi dengan Certificate of Achievement resmi dari penyelenggara IREX UiTM Malaysia.",
+        ],
+        en: [
+          "Earned the top Gold Award tier at an international Industry 4.0 innovation exposition in Malaysia.",
+          "Combined embedded microcontrollers, sensors, and cloud telemetry into a practical real-world solution.",
+          "Certified with an official Certificate of Achievement from IREX UiTM Malaysia.",
+        ],
+      },
+      certificateNote: {
+        id: "Certificate of Achievement · IREX 2024 UiTM Malaysia",
+        en: "Certificate of Achievement · IREX 2024 UiTM Malaysia",
+      },
+      actionHref: "/projects",
+      actionLabel: { id: "Lihat Proyek IoT Unggulan", en: "Explore IoT Projects" },
     },
     {
+      id: "hki-ai",
       value: "HKI",
       label: { id: "Hak Cipta Deep Learning", en: "Registered Deep Learning IP" },
+      badge: { id: "Hak Kekayaan Intelektual", en: "Intellectual Property (HKI)" },
+      title: {
+        id: "Surat Pencatatan Ciptaan — Algoritma Deep Learning Analisis Data Pasien",
+        en: "Intellectual Property Registration — Cloud Deep Learning Patient Analytics",
+      },
+      issuer: "Direktorat Jenderal Kekayaan Intelektual (DJKI)",
+      period: "2024",
+      accent: "violet",
+      description: {
+        id: 'Hak Kekayaan Intelektual resmi tercatat atas karya ilmiah & perangkat lunak: "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
+        en: 'Officially registered Intellectual Property (Surat Pencatatan Ciptaan) for "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
+      },
+      highlights: {
+        id: [
+          "Tercatat resmi melalui Surat Pencatatan Ciptaan (HKI) Republik Indonesia.",
+          "Menggunakan arsitektur Deep Learning yang dijalankan di Cloud Computing untuk mendeteksi anomali data medis pasien secara akurat.",
+          "Mendukung integrasi API ringan dengan aplikasi kesehatan dan perangkat monitoring IoT medis.",
+        ],
+        en: [
+          "Officially registered under Indonesia's Intellectual Property registry (Surat Pencatatan Ciptaan).",
+          "Deploys Deep Learning inference on Cloud Computing to detect subtle clinical anomalies in patient records.",
+          "Designed for lightweight API integration with healthcare dashboards and biomedical IoT monitors.",
+        ],
+      },
+      certificateNote: {
+        id: "Surat Pencatatan Ciptaan (HKI) · Program Komputer / AI",
+        en: "Official IP Certificate (HKI) · Computer Program / AI",
+      },
+      actionHref: "/blog/deep-learning-deteksi-anomali-data-pasien-cloud",
+      actionLabel: { id: "Baca Penjelasan Teknisnya", en: "Read Technical Breakdown" },
     },
     {
+      id: "projects-count",
       value: "20+",
       label: { id: "Proyek IoT, Web & AI", en: "IoT, Web & AI Projects" },
+      badge: { id: "Portofolio Karya", en: "Shipped Engineering Work" },
+      title: {
+        id: "20+ Proyek Lintas Disiplin: IoT, Full-Stack Web & AI",
+        en: "20+ Cross-Disciplinary Projects: IoT, Full-Stack Web & AI",
+      },
+      issuer: "Hardware Prototypes · Production Web Apps · AI Research",
+      period: "2022 – 2026",
+      accent: "sky",
+      description: {
+        id: "Mencakup sistem produksi live seperti e-commerce Bumbuket.pku, sistem pelaporan teknisi PKE Laravel, hingga belasan prototipe perangkat keras IoT biomedis, keamanan ESP32-CAM, robotika, dan sistem peringatan dini banjir Fuzzy Logic.",
+        en: "Spans live production web apps like Bumbuket.pku e-commerce and PKE Laravel maintenance portal alongside biomedical IoT prototypes, ESP32-CAM smart security, servo robotics, and Fuzzy Logic flood prediction.",
+      },
+      highlights: {
+        id: [
+          "Web & Full-Stack: Bumbuket.pku (Next.js + Supabase + Midtrans), PKE Report (Laravel), Rumah Laundry, Administrasi Sekolah, Wireless UIR.",
+          "IoT & Robotika: Monitoring Kualitas Udara Halte Bus, Arm Robotic ESP32, IoT Blood Check, Smart Baby Scale, Smart Door Face Recognition, Smart Parking, TuCalc TFT.",
+          "AI & Sistem Cerdas: Deteksi Anomali Pasien Deep Learning (HKI) & Prediksi Banjir Fuzzy Logic.",
+        ],
+        en: [
+          "Web & Full-Stack: Bumbuket.pku (Next.js + Supabase + Midtrans), PKE Report (Laravel), Rumah Laundry, School Admin, Wireless UIR.",
+          "IoT & Robotics: Urban Air Quality Monitor, ESP32 Robotic Arm, IoT Blood Check, Smart Baby Scale, ESP32-CAM Smart Door, Smart Parking, TuCalc TFT.",
+          "AI & Intelligent Systems: Cloud Deep Learning Patient Anomaly Detection (HKI) & Fuzzy Logic Flood Prediction.",
+        ],
+      },
+      actionHref: "/projects",
+      actionLabel: { id: "Buka Galeri Semua Proyek", en: "Open Full Projects Gallery" },
     },
-  ],
+  ] satisfies StatItem[],
 };
 
 export const education = {
-  institution: "Universitas Islam Riau",
+  institution: "Universitas Islam Riau - Pekanbaru",
   degree: {
-    id: "Sarjana Ilmu Komputer (S1 Teknik Informatika)",
+    id: "Sarjana Teknik Informatika",
     en: "Bachelor of Computer Science",
   } satisfies LocalizedText,
   gpa: "3.79 / 4.00",
