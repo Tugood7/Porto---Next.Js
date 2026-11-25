@@ -5,11 +5,14 @@ import { useApp } from "@/app/context/AppProviders";
 import { profile, uiText } from "@/data/portfolio";
 import {
   ArrowUpRightIcon,
+  FacebookIcon,
   GithubIcon,
+  InstagramIcon,
   LinkedinIcon,
   MailIcon,
   MapPinIcon,
   MessageCircleIcon,
+  ThreadsIcon,
 } from "./Icons";
 
 export default function ContactSection() {
@@ -45,6 +48,65 @@ export default function ContactSection() {
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
   };
 
+  const socialItems = [
+    {
+      name: "Instagram",
+      handle: profile.instagramHandle,
+      href: profile.instagramUrl,
+      icon: InstagramIcon,
+      iconBg:
+        "bg-pink-50 text-pink-600 dark:bg-pink-500/10 dark:text-pink-400",
+      hoverBorder:
+        "hover:border-pink-300 hover:bg-pink-50/40 dark:hover:border-pink-500/40 dark:hover:bg-pink-500/5",
+      hoverArrow: "group-hover:text-pink-600 dark:group-hover:text-pink-400",
+    },
+    {
+      name: "Facebook",
+      handle: profile.facebookHandle,
+      href: profile.facebookUrl,
+      icon: FacebookIcon,
+      iconBg:
+        "bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400",
+      hoverBorder:
+        "hover:border-blue-300 hover:bg-blue-50/40 dark:hover:border-blue-500/40 dark:hover:bg-blue-500/5",
+      hoverArrow: "group-hover:text-blue-600 dark:group-hover:text-blue-400",
+    },
+    {
+      name: "Threads",
+      handle: profile.threadsHandle,
+      href: profile.threadsUrl,
+      icon: ThreadsIcon,
+      iconBg:
+        "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100",
+      hoverBorder:
+        "hover:border-zinc-400 hover:bg-zinc-50 dark:hover:border-zinc-600 dark:hover:bg-zinc-800/60",
+      hoverArrow: "group-hover:text-zinc-900 dark:group-hover:text-white",
+    },
+    {
+      name: "LinkedIn",
+      handle: profile.linkedinName,
+      href: profile.linkedinUrl,
+      icon: LinkedinIcon,
+      iconBg:
+        "bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-400",
+      hoverBorder:
+        "hover:border-sky-300 hover:bg-sky-50/40 dark:hover:border-sky-500/40 dark:hover:bg-sky-500/5",
+      hoverArrow: "group-hover:text-sky-600 dark:group-hover:text-sky-400",
+    },
+    {
+      name: "GitHub",
+      handle: `@${profile.githubUsername}`,
+      href: profile.githubUrl,
+      icon: GithubIcon,
+      iconBg:
+        "bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200",
+      hoverBorder:
+        "hover:border-emerald-300 hover:bg-emerald-50/30 dark:hover:border-emerald-500/40 dark:hover:bg-emerald-500/5",
+      hoverArrow:
+        "group-hover:text-emerald-600 dark:group-hover:text-emerald-400",
+    },
+  ];
+
   return (
     <section id="contact" className="scroll-mt-24 py-16 sm:py-20">
       <div className="mb-10 max-w-2xl">
@@ -59,14 +121,19 @@ export default function ContactSection() {
         </p>
       </div>
 
+      {/* Block 1: Contact Person + Direct Message Form */}
       <div className="grid gap-6 lg:grid-cols-5">
-        {/* Direct contact cards */}
+        {/* Contact Person Card */}
         <div className="flex flex-col justify-between gap-4 rounded-2xl border border-zinc-200/80 bg-white p-6 lg:col-span-2 dark:border-zinc-800 dark:bg-zinc-900/60">
           <div>
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              {uiText.contactForm.directChannels[lang]}
-            </h3>
-            <div className="mt-4 space-y-3">
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+              {uiText.contactForm.contactPersonTitle[lang]}
+            </p>
+            <p className="mt-1 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
+              {uiText.contactForm.contactPersonSubtitle[lang]}
+            </p>
+
+            <div className="mt-5 space-y-3">
               <a
                 href={`mailto:${profile.email}`}
                 className="group flex items-center justify-between rounded-xl border border-zinc-200/80 p-3.5 transition hover:border-amber-300 hover:bg-amber-50/40 dark:border-zinc-800 dark:hover:border-amber-500/40 dark:hover:bg-amber-500/5"
@@ -93,11 +160,11 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="group flex items-center justify-between rounded-xl border border-zinc-200/80 p-3.5 transition hover:border-emerald-300 hover:bg-emerald-50/40 dark:border-zinc-800 dark:hover:border-emerald-500/40 dark:hover:bg-emerald-500/5"
               >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
+                <div className="flex min-w-0 items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
                     <MessageCircleIcon className="h-4 w-4" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
                       WhatsApp / Phone
                     </p>
@@ -106,51 +173,7 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
-                <ArrowUpRightIcon className="h-4 w-4 text-zinc-400 transition group-hover:text-emerald-600 dark:group-hover:text-emerald-400" />
-              </a>
-
-              <a
-                href={profile.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-xl border border-zinc-200/80 p-3.5 transition hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-800/50"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200">
-                    <GithubIcon className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-                      GitHub
-                    </p>
-                    <p className="font-mono text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                      @{profile.githubUsername}
-                    </p>
-                  </div>
-                </div>
-                <ArrowUpRightIcon className="h-4 w-4 text-zinc-400 transition group-hover:text-zinc-900 dark:group-hover:text-white" />
-              </a>
-
-              <a
-                href={profile.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-xl border border-zinc-200/80 p-3.5 transition hover:border-sky-300 hover:bg-sky-50/40 dark:border-zinc-800 dark:hover:border-sky-500/40 dark:hover:bg-sky-500/5"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-400">
-                    <LinkedinIcon className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-                      LinkedIn
-                    </p>
-                    <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                      {profile.linkedinName}
-                    </p>
-                  </div>
-                </div>
-                <ArrowUpRightIcon className="h-4 w-4 text-zinc-400 transition group-hover:text-sky-600 dark:group-hover:text-sky-400" />
+                <ArrowUpRightIcon className="h-4 w-4 shrink-0 text-zinc-400 transition group-hover:text-emerald-600 dark:group-hover:text-emerald-400" />
               </a>
             </div>
           </div>
@@ -166,7 +189,7 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* Quick WhatsApp Message Form */}
+        {/* Quick Message Form */}
         <form
           onSubmit={handleSubmit}
           className="rounded-2xl border border-zinc-200/80 bg-white p-6 lg:col-span-3 dark:border-zinc-800 dark:bg-zinc-900/60"
@@ -245,7 +268,54 @@ export default function ContactSection() {
           </div>
         </form>
       </div>
+
+      {/* Block 2: Dedicated Social Media Section */}
+      <div className="mt-8 rounded-2xl border border-zinc-200/80 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900/60">
+        <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-end">
+          <div>
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+              {uiText.contactForm.socialMediaTitle[lang]}
+            </p>
+            <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+              {uiText.contactForm.socialMediaSubtitle[lang]}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {socialItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center justify-between gap-3 rounded-xl border border-zinc-200/80 p-3.5 transition dark:border-zinc-800 ${item.hoverBorder}`}
+              >
+                <div className="flex min-w-0 items-center gap-3">
+                  <div
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${item.iconBg}`}
+                  >
+                    <Icon className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold text-zinc-900 dark:text-zinc-100">
+                      {item.name}
+                    </p>
+                    <p className="truncate font-mono text-[11px] text-zinc-500 dark:text-zinc-400">
+                      {item.handle}
+                    </p>
+                  </div>
+                </div>
+                <ArrowUpRightIcon
+                  className={`h-3.5 w-3.5 shrink-0 text-zinc-400 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${item.hoverArrow}`}
+                />
+              </a>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 }
-
