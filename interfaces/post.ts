@@ -67,6 +67,7 @@ export interface StatItem {
   highlights: LocalizedList;
   accent: "emerald" | "amber" | "violet" | "sky";
   certificateImage?: string;
+  certificateImages?: { src: string; label: LocalizedText }[];
   certificateUrl?: string;
   certificateNote?: LocalizedText;
   actionHref?: string;

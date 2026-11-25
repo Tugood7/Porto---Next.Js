@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useApp } from "@/app/context/AppProviders";
@@ -68,6 +68,7 @@ const accentStyles: Record<
 
 export default function StatModal({ stat, onClose }: StatModalProps) {
   const { lang } = useApp();
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
     if (!stat) return;
@@ -92,6 +93,15 @@ export default function StatModal({ stat, onClose }: StatModalProps) {
   const webCount = projects.filter((p) => p.category === "Web").length;
   const aiCount = projects.filter((p) => p.category === "AI").length;
 
+  const gallery =
+    stat.certificateImages && stat.certificateImages.length > 0
+      ? stat.certificateImages
+      : stat.certificateImage
+        ? [{ src: stat.certificateImage, label: stat.badge }]
+        : [];
+  const safeIndex = selectedIndex < gallery.length ? selectedIndex : 0;
+  const activeCert = gallery[safeIndex];
+
   return (
     <div
       className="fixed inset-0 z-[70] flex items-center justify-center p-4 sm:p-6"
@@ -102,12 +112,12 @@ export default function StatModal({ stat, onClose }: StatModalProps) {
       {/* Backdrop */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-zinc-950/65 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-zinc-950/70 backdrop-blur-sm transition-opacity"
         aria-hidden="true"
       />
 
       {/* Modal Panel */}
-      <div className="relative z-10 max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-3xl border border-zinc-200/90 bg-white shadow-2xl dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-zinc-200/90 bg-white shadow-2xl dark:border-zinc-800 dark:bg-zinc-950">
         {/* Top Close Button */}
         <button
           type="button"
@@ -133,15 +143,53 @@ export default function StatModal({ stat, onClose }: StatModalProps) {
             </span>
           </div>
 
-          {/* Optional actual certificate image OR stylized credential preview card */}
-          {stat.certificateImage ? (
-            <div className="relative mt-4 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
-              <Image
-                src={stat.certificateImage}
-                alt={stat.title[lang]}
-                fill
-                className="object-contain p-2"
-              />
+          {/* Certificate Gallery Viewer OR Project Breakdown OR Stylized Credential */}
+          {activeCert ? (
+            <div className="mt-4">
+              {gallery.length > 1 && (
+                <div className="mb-3 flex flex-wrap gap-1.5">
+                  {gallery.map((item, idx) => (
+                    <button
+                      key={item.src}
+                      type="button"
+                      onClick={() => setSelectedIndex(idx)}
+                      className={`rounded-lg px-3 py-1.5 text-xs font-medium transition cursor-pointer ${
+                        safeIndex === idx
+                          ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-950"
+                          : "border border-zinc-200 bg-white/80 text-zinc-600 hover:bg-white dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-300"
+                      }`}
+                    >
+                      {item.label[lang]}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              <a
+                href={activeCert.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={
+                  lang === "id"
+                    ? "Klik untuk memperbesar sertifikat"
+                    : "Click to view full-size certificate"
+                }
+                className="group relative block overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-2 shadow-sm transition hover:border-emerald-400 dark:border-zinc-800 dark:bg-zinc-900"
+              >
+                <div className="relative mx-auto h-[340px] w-full sm:h-[420px]">
+                  <Image
+                    src={activeCert.src}
+                    alt={`${stat.title[lang]} — ${activeCert.label[lang]}`}
+                    fill
+                    sizes="(max-width: 768px) 92vw, 600px"
+                    className="object-contain transition-transform duration-300 group-hover:scale-[1.015]"
+                  />
+                </div>
+                <span className="absolute right-3 bottom-3 inline-flex items-center gap-1 rounded-full bg-zinc-950/75 px-2.5 py-1 font-mono text-[10px] font-medium text-white backdrop-blur-xs">
+                  <span>{lang === "id" ? "Perbesar" : "Zoom"}</span>
+                  <ArrowUpRightIcon className="h-3 w-3" />
+                </span>
+              </a>
             </div>
           ) : stat.id === "projects-count" ? (
             <div className="mt-4 grid grid-cols-3 gap-2.5">
@@ -241,7 +289,7 @@ export default function StatModal({ stat, onClose }: StatModalProps) {
                 className="inline-flex items-center gap-1.5 rounded-xl border border-zinc-200 bg-white px-4 py-2 text-xs font-medium text-zinc-800 transition hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800"
               >
                 <span>
-                  {lang === "id" ? "Lihat Sertifikat Asli" : "View Certificate"}
+                  {lang === "id" ? "Buka PDF Asli" : "Open Original PDF"}
                 </span>
                 <ArrowUpRightIcon className="h-3.5 w-3.5" />
               </a>
@@ -269,4 +317,3 @@ export default function StatModal({ stat, onClose }: StatModalProps) {
     </div>
   );
 }
-

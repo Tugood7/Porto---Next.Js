@@ -80,28 +80,47 @@ export const profile = {
         id: "Gold Award — International Industrial Revolution 4.0 Exposition (IREX 2024)",
         en: "Gold Award — International Industrial Revolution 4.0 Exposition (IREX 2024)",
       },
-      issuer: "Universiti Teknologi Mara (UiTM), Malaysia",
-      period: "2024",
+      issuer: "Universiti Teknologi MARA (UiTM), Kedah Branch, Malaysia",
+      period: "20–21 Mei 2024",
       accent: "amber",
       description: {
-        id: "Meraih Medali Emas (Gold Award) pada ajang eksposisi inovasi Industri 4.0 tingkat internasional di Universiti Teknologi Mara, Malaysia, melalui karya solusi perangkat keras dan sistem cerdas berbasis IoT.",
-        en: "Awarded the Gold Medal at the International Industrial Revolution 4.0 Exposition (IREX) hosted by Universiti Teknologi Mara, Malaysia, recognizing innovative IoT hardware and smart system design.",
+        id: 'Meraih Medali Emas (Gold Award) pada ajang International Industrial Revolution 4.0 Exposition (IREX) 2024 di Universiti Teknologi MARA (UiTM), Kedah Branch, Malaysia, melalui proyek "Monitoring Air Quality and Smoke Emissions Using Internet of Things Technology at Bus Stop in Urban Areas Using MQ-135 and MQ-2 Sensors".',
+        en: 'Awarded the Gold Medal at the International Industrial Revolution 4.0 Exposition (IREX 2024) at Universiti Teknologi MARA (UiTM), Kedah Branch, Malaysia, for "Monitoring Air Quality and Smoke Emissions Using Internet of Things Technology at Bus Stop in Urban Areas Using MQ-135 and MQ-2 Sensors".',
       },
       highlights: {
         id: [
-          "Menyabet kategori tertinggi (Gold Award) di kompetisi eksposisi internasional Industri 4.0 Malaysia.",
-          "Mengintegrasikan sensor, mikrokontroler ESP32/Arduino, dan konektivitas cloud untuk pemecahan masalah nyata.",
-          "Terverifikasi dengan Certificate of Achievement resmi dari penyelenggara IREX UiTM Malaysia.",
+          "Dianugerahkan kepada tim: Evizal Abdul Kadir, Tu Bagus Dwi Fikri, dan Sri Listia Rosa.",
+          "Diselenggarakan pada 20–21 Mei 2024 di College of Computing, Informatics and Mathematics, UiTM Kedah Branch.",
+          "Ditandatangani resmi oleh Prof. Dr. Roshima Haji Said (Rector, Universiti Teknologi MARA, Kedah Branch).",
         ],
         en: [
-          "Earned the top Gold Award tier at an international Industry 4.0 innovation exposition in Malaysia.",
-          "Combined embedded microcontrollers, sensors, and cloud telemetry into a practical real-world solution.",
-          "Certified with an official Certificate of Achievement from IREX UiTM Malaysia.",
+          "Presented to team members: Evizal Abdul Kadir, Tu Bagus Dwi Fikri, and Sri Listia Rosa.",
+          "Held on 20–21 May 2024 by the College of Computing, Informatics and Mathematics, UiTM Kedah Branch.",
+          "Officially certified by Prof. Dr. Roshima Haji Said (Rector, Universiti Teknologi MARA, Kedah Branch).",
         ],
       },
+      certificateImages: [
+        {
+          src: "/certificates/irex-2024-gold.jpg",
+          label: { id: "Sertifikat Gold Award", en: "Gold Award Certificate" },
+        },
+        {
+          src: "/certificates/irex-2024-award-stage.jpg",
+          label: { id: "Panggung Penghargaan", en: "Award Ceremony" },
+        },
+        {
+          src: "/certificates/irex-2024-presentation.jpg",
+          label: { id: "Presentasi Booth IRX066", en: "Booth IRX066 Presentation" },
+        },
+        {
+          src: "/certificates/irex-2024-participation.jpg",
+          label: { id: "Sertifikat Partisipasi", en: "Participation Certificate" },
+        },
+      ],
+      certificateUrl: "/certificates/irex-2024-gold.pdf",
       certificateNote: {
-        id: "Certificate of Achievement · IREX 2024 UiTM Malaysia",
-        en: "Certificate of Achievement · IREX 2024 UiTM Malaysia",
+        id: "Gold Award & Certificate of Participation · IREX 2024 UiTM Kedah, Malaysia",
+        en: "Gold Award & Certificate of Participation · IREX 2024 UiTM Kedah, Malaysia",
       },
       actionHref: "/projects",
       actionLabel: { id: "Lihat Proyek IoT Unggulan", en: "Explore IoT Projects" },
@@ -1203,6 +1222,7 @@ export const projects: Project[] = [
     category: "IoT",
     year: "2024",
     badge: { id: "Gold Award · Malaysia", en: "Gold Award · Malaysia" },
+    image: "/certificates/irex-2024-award-stage.jpg",
     techStack: ["ESP32", "Arduino", "MQTT", "Cloud IoT", "C++"],
     highlights: {
       id: [
