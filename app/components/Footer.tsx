@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useApp } from "@/app/context/AppProviders";
 import { profile, uiText } from "@/data/portfolio";
-import { GithubIcon, LinkedinIcon, MessageCircleIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, MailIcon, MessageCircleIcon } from "./Icons";
 
 export default function Footer() {
   const { lang } = useApp();
@@ -42,6 +42,13 @@ export default function Footer() {
 
           <span className="h-3.5 w-px bg-zinc-200 dark:bg-zinc-800" aria-hidden="true" />
 
+          <a
+            href={`mailto:${profile.email}`}
+            aria-label="Email"
+            className="text-zinc-500 transition hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400"
+          >
+            <MailIcon className="h-4 w-4" />
+          </a>
           <a
             href={profile.githubUrl}
             target="_blank"

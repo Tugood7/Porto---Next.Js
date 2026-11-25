@@ -7,6 +7,7 @@ import {
   ArrowUpRightIcon,
   GithubIcon,
   LinkedinIcon,
+  MailIcon,
   MapPinIcon,
   MessageCircleIcon,
 } from "./Icons";
@@ -17,16 +18,31 @@ export default function ContactSection() {
   const [topic, setTopic] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
+  const buildFormattedMessage = () => {
     const greeting =
       lang === "id"
         ? `Halo Tu Bagus, saya ${name || "pengunjung portofolio"}.`
         : `Hi Tu Bagus, I'm ${name || "a visitor from your portfolio"}.`;
     const subjectLine = topic ? `\n${lang === "id" ? "Topik" : "Topic"}: ${topic}` : "";
     const bodyLine = message ? `\n\n${message}` : "";
-    const encoded = encodeURIComponent(`${greeting}${subjectLine}${bodyLine}`);
+    return `${greeting}${subjectLine}${bodyLine}`;
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const encoded = encodeURIComponent(buildFormattedMessage());
     window.open(`${profile.whatsappUrl}?text=${encoded}`, "_blank", "noopener,noreferrer");
+  };
+
+  const handleEmailClick = () => {
+    const subject = encodeURIComponent(
+      topic ||
+        (lang === "id"
+          ? `Pesan dari ${name || "Portofolio"}`
+          : `Message from ${name || "Portfolio"}`)
+    );
+    const body = encodeURIComponent(buildFormattedMessage());
+    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -51,6 +67,26 @@ export default function ContactSection() {
               {uiText.contactForm.directChannels[lang]}
             </h3>
             <div className="mt-4 space-y-3">
+              <a
+                href={`mailto:${profile.email}`}
+                className="group flex items-center justify-between rounded-xl border border-zinc-200/80 p-3.5 transition hover:border-amber-300 hover:bg-amber-50/40 dark:border-zinc-800 dark:hover:border-amber-500/40 dark:hover:bg-amber-500/5"
+              >
+                <div className="flex min-w-0 items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400">
+                    <MailIcon className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                      Email
+                    </p>
+                    <p className="truncate font-mono text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                      {profile.email}
+                    </p>
+                  </div>
+                </div>
+                <ArrowUpRightIcon className="h-4 w-4 shrink-0 text-zinc-400 transition group-hover:text-amber-600 dark:group-hover:text-amber-400" />
+              </a>
+
               <a
                 href={profile.whatsappUrl}
                 target="_blank"
@@ -190,7 +226,15 @@ export default function ContactSection() {
             />
           </div>
 
-          <div className="mt-5 flex justify-end">
+          <div className="mt-5 flex flex-wrap items-center justify-end gap-3">
+            <button
+              type="button"
+              onClick={handleEmailClick}
+              className="inline-flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-sm font-medium text-zinc-800 transition hover:border-zinc-300 hover:bg-zinc-50 cursor-pointer dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:bg-zinc-800"
+            >
+              <MailIcon className="h-4 w-4" />
+              <span>{uiText.contactForm.sendEmail[lang]}</span>
+            </button>
             <button
               type="submit"
               className="inline-flex items-center gap-2 rounded-xl bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-emerald-600 cursor-pointer dark:bg-emerald-500 dark:text-zinc-950 dark:hover:bg-emerald-400"

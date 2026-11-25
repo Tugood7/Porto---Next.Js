@@ -22,6 +22,7 @@ import {
   GithubIcon,
   GraduationCapIcon,
   LinkedinIcon,
+  MailIcon,
   MapPinIcon,
 } from "./Icons";
 
@@ -111,6 +112,13 @@ export default function HomeClient({ latestPosts }: HomeClientProps) {
                 {profile.location}
               </span>
               <span className="h-3 w-px bg-zinc-200 dark:bg-zinc-800" />
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-1.5 transition hover:text-zinc-900 dark:hover:text-white"
+              >
+                <MailIcon className="h-3.5 w-3.5" />
+                <span>{profile.email}</span>
+              </a>
               <a
                 href={profile.githubUrl}
                 target="_blank"

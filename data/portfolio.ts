@@ -1465,6 +1465,7 @@ export const uiText = {
       en: "Tell me briefly about your project or idea...",
     },
     sendWhatsapp: { id: "Kirim via WhatsApp", en: "Send via WhatsApp" },
+    sendEmail: { id: "Kirim via Email", en: "Send via Email" },
     directChannels: { id: "Kontak Langsung", en: "Direct Channels" },
     locationLabel: { id: "Lokasi", en: "Location" },
   },
