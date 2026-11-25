@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9FB"/>
+      <stop offset="55%" stop-color="#FCE7F3"/>
+      <stop offset="100%" stop-color="#FBCFE8"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9D174D"/>
+      <stop offset="100%" stop-color="#BE185D"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#9D174D" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="720" cy="70" r="130" fill="#F472B6" fill-opacity="0.14"/>
+  <circle cx="80" cy="440" r="140" fill="#9D174D" fill-opacity="0.08"/>
+
+  <!-- Browser Window Mockup -->
+  <g filter="url(#shadow)">
+    <rect x="64" y="44" width="672" height="412" rx="18" fill="#FFFFFF" stroke="#F9A8D4" stroke-opacity="0.55" stroke-width="1.5"/>
+    <!-- Top bar -->
+    <path d="M64 62 a18 18 0 0 1 18 -18 h636 a18 18 0 0 1 18 18 v24 H64 Z" fill="#FFF5F9"/>
+    <line x1="64" y1="86" x2="736" y2="86" stroke="#FCE7F3" stroke-width="1.5"/>
+    <circle cx="90" cy="65" r="5" fill="#F472B6"/>
+    <circle cx="108" cy="65" r="5" fill="#FBCFE8"/>
+    <circle cx="126" cy="65" r="5" fill="#E5E7EB"/>
+    <rect x="235" y="54" width="330" height="22" rx="11" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="1"/>
+    <text x="400" y="69" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#9D174D">bumbuket.tugoodly.my.id</text>
+
+    <!-- Storefront Header -->
+    <text x="98" y="122" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#9D174D">Bumbuket.pku</text>
+    <text x="530" y="120" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#6B7280">Katalog</text>
+    <text x="588" y="120" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#6B7280">Money Bouquet</text>
+    <rect x="676" y="106" width="32" height="22" rx="11" fill="#FCE7F3"/>
+    <text x="692" y="121" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="600" fill="#9D174D">Cart</text>
+
+    <!-- Hero Left -->
+    <rect x="98" y="148" width="152" height="22" rx="11" fill="#FCE7F3"/>
+    <text x="174" y="163" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="600" fill="#9D174D">PEKANBARU FLORIST</text>
+
+    <text x="98" y="204" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#1F2937">Premium Bouquet</text>
+    <text x="98" y="238" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#9D174D">&amp; Money Bouquet</text>
+
+    <text x="98" y="268" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12.5" fill="#6B7280">E-Commerce Full-Stack · Kustomisasi Wrapping,</text>
+    <text x="98" y="286" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12.5" fill="#6B7280">Kartu Ucapan, DP/Lunas, Midtrans &amp; Admin Panel.</text>
+
+    <!-- CTA Buttons -->
+    <rect x="98" y="308" width="136" height="36" rx="10" fill="url(#cta)"/>
+    <text x="166" y="330" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Lihat Katalog</text>
+
+    <rect x="244" y="308" width="144" height="36" rx="10" fill="#FFF5F9" stroke="#F472B6" stroke-width="1.2"/>
+    <text x="316" y="330" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#9D174D">Order WhatsApp</text>
+
+    <!-- Product Cards Right -->
+    <rect x="438" y="146" width="124" height="196" rx="14" fill="#FFF9FB" stroke="#FBCFE8" stroke-width="1.2"/>
+    <rect x="450" y="158" width="100" height="104" rx="10" fill="#FCE7F3"/>
+    <circle cx="500" cy="204" r="24" fill="#F472B6" fill-opacity="0.35"/>
+    <circle cx="490" cy="198" r="13" fill="#EC4899" fill-opacity="0.5"/>
+    <circle cx="510" cy="198" r="13" fill="#F472B6" fill-opacity="0.6"/>
+    <circle cx="500" cy="214" r="13" fill="#9D174D" fill-opacity="0.55"/>
+    <rect x="456" y="164" width="58" height="16" rx="8" fill="#10B981"/>
+    <text x="485" y="175" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#FFFFFF">READY</text>
+    <text x="450" y="280" font-family="Georgia, serif" font-size="11.5" font-weight="700" fill="#1F2937">Blush Lily</text>
+    <text x="450" y="296" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#9D174D">Rp 185.000</text>
+    <rect x="450" y="310" width="100" height="20" rx="6" fill="#FCE7F3"/>
+    <text x="500" y="324" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#9D174D">Custom Card</text>
+
+    <rect x="576" y="162" width="124" height="196" rx="14" fill="#FFF9FB" stroke="#FBCFE8" stroke-width="1.2"/>
+    <rect x="588" y="174" width="100" height="104" rx="10" fill="#FDF2F8"/>
+    <rect x="614" y="196" width="48" height="60" rx="8" fill="#F472B6" fill-opacity="0.28" stroke="#9D174D" stroke-opacity="0.4"/>
+    <text x="638" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#9D174D">Rp</text>
+    <rect x="594" y="180" width="66" height="16" rx="8" fill="#9D174D"/>
+    <text x="627" y="191" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#FFFFFF">CUSTOM</text>
+    <text x="588" y="296" font-family="Georgia, serif" font-size="11.5" font-weight="700" fill="#1F2937">Money Bouquet</text>
+    <text x="588" y="312" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#9D174D">Mulai Rp 100k</text>
+    <rect x="588" y="326" width="100" height="20" rx="6" fill="#FCE7F3"/>
+    <text x="638" y="340" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#9D174D">1–100 Lembar</text>
+
+    <!-- Bottom Tech Strip -->
+    <line x1="98" y1="382" x2="700" y2="382" stroke="#FCE7F3" stroke-width="1.2"/>
+    <text x="98" y="410" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#9D174D">Next.js · Turborepo · Supabase · Midtrans · Docker</text>
+    <rect x="602" y="394" width="98" height="24" rx="12" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <circle cx="618" cy="406" r="4" fill="#10B981"/>
+    <text x="656" y="410" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#047857">LIVE APP</text>
+  </g>
+</svg>
+

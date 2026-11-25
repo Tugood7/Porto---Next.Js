@@ -48,7 +48,7 @@ export const profile = {
       label: { id: "Hak Cipta Deep Learning", en: "Registered Deep Learning IP" },
     },
     {
-      value: "19+",
+      value: "20+",
       label: { id: "Proyek IoT, Web & AI", en: "IoT, Web & AI Projects" },
     },
   ],
@@ -185,6 +185,8 @@ export const skillGroups: SkillGroup[] = [
     id: "databases-devops",
     title: { id: "Database & DevOps", en: "Databases & DevOps" },
     skills: [
+      "Supabase",
+      "PostgreSQL",
       "MySQL",
       "MongoDB",
       "Docker",
@@ -466,6 +468,51 @@ export const organizations: ExperienceItem[] = [
 
 export const projects: Project[] = [
   {
+    id: "bumbuket-pku",
+    title: {
+      id: "Bumbuket.pku — Platform E-Commerce Toko Buket Premium",
+      en: "Bumbuket.pku — Full-Stack Premium Bouquet E-Commerce",
+    },
+    subtitle: {
+      id: "E-commerce buket kustom, kalkulator Money Bouquet, DP/Lunas, & Admin Dashboard",
+      en: "Custom florist storefront, Money Bouquet calculator, DP/Full checkout & Admin Panel",
+    },
+    description: {
+      id: "Platform e-commerce full-stack untuk bisnis toko buket Bumbuket.pku di Pekanbaru berbasis Turborepo Monorepo (Next.js App Router, Supabase PostgreSQL + RLS + Storage). Dilengkapi kustomisasi warna wrapping, kartu ucapan, kalkulator Money Bouquet 1–100 lembar, Hybrid Checkout (Midtrans, Transfer BRI + upload bukti, WhatsApp) dengan opsi bayar DP atau Lunas, serta Dashboard Admin jadwal pesanan yang di-deploy mandiri dengan Docker.",
+      en: "A full-stack e-commerce platform for Bumbuket.pku florist in Pekanbaru built on a Turborepo monorepo (Next.js App Router, Supabase PostgreSQL + RLS + Storage). Features bouquet wrapping & greeting card customization, a 1–100 sheet Money Bouquet pricing calculator, Hybrid Checkout (Midtrans, BRI transfer with proof upload, WhatsApp) supporting DP or Full payment, and an operations Admin Dashboard deployed via Docker.",
+    },
+    category: "Web",
+    year: "2026",
+    badge: { id: "Live Production · Full-Stack", en: "Live Production · Full-Stack" },
+    image: "/projects/bumbuket-pku.svg",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Turborepo",
+      "Supabase",
+      "Tailwind CSS",
+      "Midtrans",
+      "Docker",
+    ],
+    highlights: {
+      id: [
+        "Katalog Ready Stock & Pre-Order lengkap dengan kustomisasi wrapping, Kartu Ucapan, dan slot jadwal buka toko Pekanbaru.",
+        "Kalkulator otomatis Money Bouquet (1–100 lembar) serta pengiriman lokal via Gojek, Maxim, dan Grab.",
+        "Hybrid Checkout mendukung Midtrans Snap, Transfer BRI (upload bukti), dan WhatsApp dengan skema DP minimal 50% atau Lunas.",
+        "Dashboard Admin terproteksi role untuk kelola produk, varian, stok, verifikasi pembayaran, dan jadwal produksi buket.",
+      ],
+      en: [
+        "Ready Stock & Pre-Order catalog with wrapping color picker, greeting card notes, and Pekanbaru store-hours scheduling.",
+        "Interactive Money Bouquet calculator (1–100 sheets) and local instant courier selection (Gojek, Maxim, Grab).",
+        "Hybrid Checkout supporting Midtrans Snap, BRI bank transfer (with payment proof upload), and WhatsApp with DP or Full payment plans.",
+        "Role-protected Admin Dashboard for product/variant CRUD, Supabase Storage uploads, payment verification, and order scheduling.",
+      ],
+    },
+    liveUrl: "https://bumbuket.tugoodly.my.id",
+    liveLabel: { id: "Live Website", en: "Live Website" },
+    featured: true,
+  },
+  {
     id: "air-quality-iot",
     title: {
       id: "Monitoring Kualitas Udara & Emisi Asap Halte Bus (IoT)",
@@ -602,7 +649,7 @@ export const projects: Project[] = [
         "Streamlines digital health recording for clinics and community health posts.",
       ],
     },
-    featured: true,
+    featured: false,
   },
   {
     id: "flood-fuzzy-iot",
