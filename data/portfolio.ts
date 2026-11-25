@@ -64,9 +64,15 @@ export const profile = {
           "Served as Practicum Teaching Assistant and Lead of Robotic Automation & Wireless Research (RAWR UIR).",
         ],
       },
+      certificateImages: [
+        {
+          src: "/certificates/wisuda-uir-2024.jpg",
+          label: { id: "Wisuda UIR (25 Juni 2024)", en: "UIR Graduation (June 25, 2024)" },
+        },
+      ],
       certificateNote: {
-        id: "Ijazah & Transkrip S1 Teknik Informatika · Universitas Islam Riau",
-        en: "Bachelor of Computer Science Diploma & Transcript · UIR",
+        id: "Wisuda Sarjana Periode II Tahun 2024 (25 Juni 2024) · Universitas Islam Riau",
+        en: "Bachelor's Graduation Ceremony Period II 2024 (June 25, 2024) · UIR",
       },
       actionHref: "/about",
       actionLabel: { id: "Lihat Riwayat Pendidikan & Pengalaman", en: "View Full Education & Experience" },
@@ -127,35 +133,54 @@ export const profile = {
     },
     {
       id: "hki-ai",
-      value: "HKI",
-      label: { id: "Hak Cipta Deep Learning", en: "Registered Deep Learning IP" },
-      badge: { id: "Hak Kekayaan Intelektual", en: "Intellectual Property (HKI)" },
+      value: "Paten",
+      label: { id: "Paten & HKI (IoT · AI)", en: "Patent & Copyright (IoT · AI)" },
+      badge: { id: "Paten Sederhana & HKI", en: "Granted Patent & Copyright IP" },
       title: {
-        id: "Surat Pencatatan Ciptaan — Algoritma Deep Learning Analisis Data Pasien",
-        en: "Intellectual Property Registration — Cloud Deep Learning Patient Analytics",
+        id: "Sertifikat Paten Sederhana (IDS000014793) & Hak Cipta (000555693)",
+        en: "Granted Utility Patent (IDS000014793) & Copyright IP (000555693)",
       },
-      issuer: "Direktorat Jenderal Kekayaan Intelektual (DJKI)",
-      period: "2024",
+      issuer: "Kementerian Hukum RI · Direktorat Jenderal Kekayaan Intelektual (DJKI)",
+      period: "2023 – 2026",
       accent: "violet",
       description: {
-        id: 'Hak Kekayaan Intelektual resmi tercatat atas karya ilmiah & perangkat lunak: "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
-        en: 'Officially registered Intellectual Property (Surat Pencatatan Ciptaan) for "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
+        id: 'Memiliki dua kekayaan intelektual resmi tingkat nasional di bidang kesehatan cerdas: Paten Sederhana "Sistem Pemantauan Kesehatan Pasien Dengan Multi Sensor Berbasis Teknologi IoT dan Cloud Computing" (Nomor Paten IDS000014793, diberikan 6 Agustus 2026) serta Surat Pencatatan Ciptaan "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing" (Nomor Pencatatan 000555693).',
+        en: 'Co-inventor and co-creator of two official Indonesian Intellectual Properties in smart healthcare: Granted Utility Patent "Multi-Sensor Patient Health Monitoring System Based on IoT and Cloud Computing" (Patent No. IDS000014793, granted Aug 6, 2026) and Registered Copyright "Deep Learning Patient Anomaly Detection Algorithm on Cloud Computing" (Reg. No. 000555693).',
       },
       highlights: {
         id: [
-          "Tercatat resmi melalui Surat Pencatatan Ciptaan (HKI) Republik Indonesia.",
-          "Menggunakan arsitektur Deep Learning yang dijalankan di Cloud Computing untuk mendeteksi anomali data medis pasien secara akurat.",
-          "Mendukung integrasi API ringan dengan aplikasi kesehatan dan perangkat monitoring IoT medis.",
+          "Paten Sederhana No. IDS000014793 (Pemegang: Universitas Islam Riau · Inventor: Evizal, Apri Siswanto, Sri Listia Rosa, Tu Bagus Dwi Fikri) — pelindungan 10 tahun sejak 10 Desember 2024.",
+          "Memantau 5 parameter vital pasien (suhu tubuh, tekanan darah sistolik & diastolik, detak jantung ECG, dan lokasi) via ESP32, jaringan mesh Wi-Fi 802.11ax, serta analitik Cloud/Fog Computing.",
+          "Surat Pencatatan Ciptaan No. 000555693 (Permohonan EC002023122738, 1 Desember 2023) untuk Program Komputer Algoritma Deep Learning Deteksi Anomali Pasien — pelindungan 50 tahun.",
         ],
         en: [
-          "Officially registered under Indonesia's Intellectual Property registry (Surat Pencatatan Ciptaan).",
-          "Deploys Deep Learning inference on Cloud Computing to detect subtle clinical anomalies in patient records.",
-          "Designed for lightweight API integration with healthcare dashboards and biomedical IoT monitors.",
+          "Granted Utility Patent No. IDS000014793 (Holder: Universitas Islam Riau · Inventors: Evizal, Apri Siswanto, Sri Listia Rosa, Tu Bagus Dwi Fikri) — 10-year protection from Dec 10, 2024.",
+          "Monitors 5 vital patient parameters (temperature, systolic & diastolic blood pressure, ECG heart rate, location) via ESP32, Wi-Fi 802.11ax mesh networking, and Cloud/Fog analytics.",
+          "Registered Copyright No. 000555693 (App. EC002023122738, Dec 1, 2023) for Deep Learning Patient Anomaly Detection Software — 50-year protection.",
         ],
       },
+      certificateImages: [
+        {
+          src: "/certificates/paten-ids000014793.jpg",
+          label: { id: "Sertifikat Paten (IDS000014793)", en: "Patent Certificate (IDS000014793)" },
+        },
+        {
+          src: "/certificates/hki-000555693.jpg",
+          label: { id: "Hak Cipta (000555693)", en: "Copyright IP (000555693)" },
+        },
+        {
+          src: "/certificates/paten-prototipe.jpg",
+          label: { id: "Prototipe & Arsitektur", en: "Prototype & Architecture" },
+        },
+        {
+          src: "/certificates/paten-dashboard.jpg",
+          label: { id: "Dashboard Medis Cloud", en: "Cloud Medical Dashboard" },
+        },
+      ],
+      certificateUrl: "/certificates/paten-ids000014793.pdf",
       certificateNote: {
-        id: "Surat Pencatatan Ciptaan (HKI) · Program Komputer / AI",
-        en: "Official IP Certificate (HKI) · Computer Program / AI",
+        id: "Paten Sederhana No. IDS000014793 & Hak Cipta No. 000555693 · DJKI",
+        en: "Patent No. IDS000014793 & Copyright No. 000555693 · DGIP Indonesia",
       },
       actionHref: "/blog/deep-learning-deteksi-anomali-data-pasien-cloud",
       actionLabel: { id: "Baca Penjelasan Teknisnya", en: "Read Technical Breakdown" },
@@ -231,17 +256,31 @@ export const achievements: AchievementItem[] = [
     },
   },
   {
+    id: "paten-ids000014793",
+    title: {
+      id: "Sertifikat Paten Sederhana (No. IDS000014793) — Sistem Pemantauan Kesehatan Pasien IoT & Cloud",
+      en: "Granted Utility Patent (No. IDS000014793) — Multi-Sensor IoT & Cloud Patient Health Monitoring",
+    },
+    issuer: "Kementerian Hukum RI · Direktorat Jenderal Kekayaan Intelektual (DJKI)",
+    year: "2026",
+    category: { id: "Paten Nasional", en: "Granted Patent" },
+    description: {
+      id: 'Paten Sederhana resmi (Nomor Paten IDS000014793, diberikan 6 Agustus 2026) atas invensi "Sistem Pemantauan Kesehatan Pasien Dengan Multi Sensor Berbasis Teknologi Internet of Things dan Cloud Computing" bersama tim inventor Universitas Islam Riau.',
+      en: 'Officially granted Indonesian Utility Patent (No. IDS000014793, granted Aug 6, 2026) for "Multi-Sensor Patient Health Monitoring System Based on Internet of Things and Cloud Computing" with Universitas Islam Riau.',
+    },
+  },
+  {
     id: "hki-deep-learning",
     title: {
-      id: "Surat Pencatatan Ciptaan (HKI) — Deep Learning Analisis Data Pasien",
-      en: "Intellectual Property (HKI) — Deep Learning Patient Anomaly Detection",
+      id: "Surat Pencatatan Ciptaan (No. 000555693) — Deep Learning Analisis Data Pasien",
+      en: "Registered Copyright (No. 000555693) — Deep Learning Patient Anomaly Detection",
     },
-    issuer: "Direktorat Jenderal Kekayaan Intelektual",
-    year: "2024",
-    category: { id: "Hak Kekayaan Intelektual", en: "Intellectual Property" },
+    issuer: "Kementerian Hukum dan HAM RI · DJKI",
+    year: "2023",
+    category: { id: "Hak Cipta (HKI)", en: "Copyright IP (HKI)" },
     description: {
-      id: 'Tercatat secara resmi atas karya "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
-      en: 'Officially registered for "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
+      id: 'Tercatat resmi (No. Pencatatan 000555693, Permohonan EC002023122738) atas karya Program Komputer "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
+      en: 'Officially registered (Reg. No. 000555693, App. EC002023122738) for the computer program "Algoritma Analisa Ketidaknormalan Data Pasien Menggunakan Teknologi Deep Learning Pada Cloud Computing".',
     },
   },
   {
@@ -1188,8 +1227,10 @@ export const projects: Project[] = [
     },
     category: "AI",
     year: "2024",
-    badge: { id: "Terdaftar HKI", en: "Registered IP (HKI)" },
-    techStack: ["Python", "Deep Learning", "Cloud Computing", "Jupyter Notebook"],
+    badge: { id: "Paten IDS000014793 & HKI", en: "Patent IDS000014793 & IP" },
+    image: "/certificates/paten-prototipe.jpg",
+    imageFit: "contain",
+    techStack: ["Python", "Deep Learning", "ESP32", "Cloud Computing", "IoT ECG"],
     highlights: {
       id: [
         "Pencatatan resmi Surat Pencatatan Ciptaan (HKI) atas algoritma analisis anomali pasien.",
